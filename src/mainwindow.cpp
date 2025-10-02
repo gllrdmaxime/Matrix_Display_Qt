@@ -17,7 +17,8 @@
  * @param parent Pointeur vers le widget parent (par défaut nullptr)
  */
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+    : QMainWindow(parent),
+      defaultText(QStringLiteral("HELLO WORLD!"))
 {
     QWidget *centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
@@ -38,10 +39,10 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *colorButton = new QPushButton("Change Color", this);
     controlsLayout->addWidget(colorButton);
 
-    QCheckBox *clockCheckBox = new QCheckBox("Show Clock", this);
+    clockCheckBox = new QCheckBox("Show Clock", this);
     controlsLayout->addWidget(clockCheckBox);
 
-    QCheckBox *scrollCheckBox = new QCheckBox("Scroll", this); // Ajout
+    scrollCheckBox = new QCheckBox("Scroll", this);
     controlsLayout->addWidget(scrollCheckBox);
 
     mainLayout->addLayout(controlsLayout);
@@ -55,8 +56,9 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowTitle("Matrix Display");
     resize(900, 220);
 
-    matrixDisplay->setText("HELLO WORLD!");
-    scrollCheckBox->setChecked(false); // Activer le scroll par défaut si le texte est plus large que la fenêtre
+    matrixDisplay->setText(defaultText);
+    textInput->setText(defaultText);
+    scrollCheckBox->setChecked(matrixDisplay->requiresScrolling());
 }
 
 MainWindow::~MainWindow() {}
@@ -67,6 +69,10 @@ MainWindow::~MainWindow() {}
 void MainWindow::updateMatrixText()
 {
     matrixDisplay->setText(textInput->text());
+    bool needsScroll = matrixDisplay->requiresScrolling();
+    if (scrollCheckBox->isChecked() != needsScroll) {
+        scrollCheckBox->setChecked(needsScroll);
+    }
 }
 
 /**
@@ -81,17 +87,27 @@ void MainWindow::openColorPicker()
 }
 
 /**
- * @brief Active ou désactive le mode horloge sur la matrice LED
- * @param checked Vrai si la case est cochée (mode horloge activé), faux sinon
+ * @brief Active ou désactive le mode horloge sur la matrice LED.
+ *        Force la désactivation du défilement en mode horloge et restaure
+ *        un texte par défaut lors du retour en mode texte si aucun contenu n'a été saisi.
  */
 void MainWindow::toggleClock(bool checked)
 {
     if (checked) {
+        scrollCheckBox->setChecked(false);
+        matrixDisplay->setScrollEnabled(false);
         matrixDisplay->setDisplayMode(MatrixDisplay::Clock);
         textInput->setEnabled(false);
     } else {
         matrixDisplay->setDisplayMode(MatrixDisplay::Text);
+        if (textInput->text().trimmed().isEmpty()) {
+            textInput->setText(defaultText);
+        }
         matrixDisplay->setText(textInput->text());
+        bool needsScroll = matrixDisplay->requiresScrolling();
+        if (scrollCheckBox->isChecked() != needsScroll) {
+            scrollCheckBox->setChecked(needsScroll);
+        }
         textInput->setEnabled(true);
     }
 }
