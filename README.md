@@ -37,9 +37,8 @@ cmake --build .
 
 ## Documentation
 
-Doxygen comments are available. Generate the documentation with your preferred Doxygen configuration, for example:
+Doxygen comments are available. Generate the documentation with the Project Configuration:
 
 ```sh
-doxygen -g Doxyfile
 doxygen Doxyfile
 ```
