@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PIGI_Qt_G:  Fichier source de mainwindow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PIGI_Qt_G<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('mainwindow_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">mainwindow.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mainwindow_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="mainwindow_8h.html">headers/mainwindow.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="matrixdisplay_8h.html">headers/matrixdisplay.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QVBoxLayout&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QHBoxLayout&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QLineEdit&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;QCheckBox&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;QColorDialog&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">   22</a></span><a class="code hl_function" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a>(QWidget *parent)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    : QMainWindow(parent),</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      defaultText(QStringLiteral(<span class="stringliteral">&quot;HELLO WORLD!&quot;</span>))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    QWidget *centralWidget = <span class="keyword">new</span> QWidget(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    setCentralWidget(centralWidget);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    QVBoxLayout *mainLayout = <span class="keyword">new</span> QVBoxLayout(centralWidget);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a> = <span class="keyword">new</span> <a class="code hl_class" href="classMatrixDisplay.html">MatrixDisplay</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    mainLayout-&gt;addWidget(<a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    QHBoxLayout *controlsLayout = <span class="keyword">new</span> QHBoxLayout();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a> = <span class="keyword">new</span> QLineEdit(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;setPlaceholderText(<span class="stringliteral">&quot;Enter text to display&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    controlsLayout-&gt;addWidget(<a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    QPushButton *updateButton = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;Update Text&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    controlsLayout-&gt;addWidget(updateButton);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    QPushButton *colorButton = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;Change Color&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    controlsLayout-&gt;addWidget(colorButton);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_variable" href="classMainWindow.html#aa8752d5350d2951a1e7d8eb627e9d70d">clockCheckBox</a> = <span class="keyword">new</span> QCheckBox(<span class="stringliteral">&quot;Show Clock&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    controlsLayout-&gt;addWidget(<a class="code hl_variable" href="classMainWindow.html#aa8752d5350d2951a1e7d8eb627e9d70d">clockCheckBox</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a> = <span class="keyword">new</span> QCheckBox(<span class="stringliteral">&quot;Scroll&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    controlsLayout-&gt;addWidget(<a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    mainLayout-&gt;addLayout(controlsLayout);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    connect(updateButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">MainWindow::updateMatrixText</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    connect(<a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>, &amp;QLineEdit::returnPressed, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">MainWindow::updateMatrixText</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    connect(colorButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classMainWindow.html#af91c8db3fce808f0870503cf1efd6668">MainWindow::openColorPicker</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    connect(<a class="code hl_variable" href="classMainWindow.html#aa8752d5350d2951a1e7d8eb627e9d70d">clockCheckBox</a>, &amp;QCheckBox::toggled, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924">MainWindow::toggleClock</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    connect(<a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>, &amp;QCheckBox::toggled, <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>, &amp;<a class="code hl_slot" href="classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66">MatrixDisplay::setScrollEnabled</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    setWindowTitle(<span class="stringliteral">&quot;Matrix Display&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    resize(900, 220);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1">setText</a>(<a class="code hl_variable" href="classMainWindow.html#ad2d58a74173162c294ea00bbd62122c4">defaultText</a>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;setText(<a class="code hl_variable" href="classMainWindow.html#ad2d58a74173162c294ea00bbd62122c4">defaultText</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>-&gt;setChecked(<a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_function" href="classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee">requiresScrolling</a>());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">   67</a></span><a class="code hl_function" href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a>() {}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">   72</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">MainWindow::updateMatrixText</a>()</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1">setText</a>(<a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;text());</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">bool</span> needsScroll = <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_function" href="classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee">requiresScrolling</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>-&gt;isChecked() != needsScroll) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>-&gt;setChecked(needsScroll);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classMainWindow.html#af91c8db3fce808f0870503cf1efd6668">   84</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#af91c8db3fce808f0870503cf1efd6668">MainWindow::openColorPicker</a>()</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    QColor color = QColorDialog::getColor(Qt::green, <span class="keyword">this</span>, <span class="stringliteral">&quot;Choose Pixel Color&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> (color.isValid()) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337">setColor</a>(color);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924">   97</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924">MainWindow::toggleClock</a>(<span class="keywordtype">bool</span> checked)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> (checked) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>-&gt;setChecked(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66">setScrollEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f">setDisplayMode</a>(<a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984">MatrixDisplay::Clock</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f">setDisplayMode</a>(<a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">MatrixDisplay::Text</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;text().trimmed().isEmpty()) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;setText(<a class="code hl_variable" href="classMainWindow.html#ad2d58a74173162c294ea00bbd62122c4">defaultText</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_slot" href="classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1">setText</a>(<a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;text());</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">bool</span> needsScroll = <a class="code hl_variable" href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">matrixDisplay</a>-&gt;<a class="code hl_function" href="classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee">requiresScrolling</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>-&gt;isChecked() != needsScroll) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <a class="code hl_variable" href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">scrollCheckBox</a>-&gt;setChecked(needsScroll);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_variable" href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">textInput</a>-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+</div>
+<div class="ttc" id="aclassMainWindow_html_a2ac7dc94189b9755b772cf889c82d924"><div class="ttname"><a href="classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924">MainWindow::toggleClock</a></div><div class="ttdeci">void toggleClock(bool checked)</div><div class="ttdoc">Active ou désactive le mode horloge et gère l'état du défilement.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00097">mainwindow.cpp:97</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a304ff148ce05c05784afb24b76ed3563"><div class="ttname"><a href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">MainWindow::matrixDisplay</a></div><div class="ttdeci">MatrixDisplay * matrixDisplay</div><div class="ttdoc">Widget affichant la matrice LED.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00064">mainwindow.h:64</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a6b51b7c9f36c29a1056fdeec5f563d92"><div class="ttname"><a href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">MainWindow::textInput</a></div><div class="ttdeci">QLineEdit * textInput</div><div class="ttdoc">Champ permettant la saisie du texte utilisateur.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00069">mainwindow.h:69</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a7c5933cf15ac0d7d2b227204de311f5b"><div class="ttname"><a href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">MainWindow::updateMatrixText</a></div><div class="ttdeci">void updateMatrixText()</div><div class="ttdoc">Synchronise la matrice avec le contenu du champ de saisie.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00072">mainwindow.cpp:72</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Macro Qt pour la gestion des signaux et slots.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00022">mainwindow.cpp:22</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_aa8752d5350d2951a1e7d8eb627e9d70d"><div class="ttname"><a href="classMainWindow.html#aa8752d5350d2951a1e7d8eb627e9d70d">MainWindow::clockCheckBox</a></div><div class="ttdeci">QCheckBox * clockCheckBox</div><div class="ttdoc">Case à cocher contrôlant le mode horloge.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00079">mainwindow.h:79</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ad2d58a74173162c294ea00bbd62122c4"><div class="ttname"><a href="classMainWindow.html#ad2d58a74173162c294ea00bbd62122c4">MainWindow::defaultText</a></div><div class="ttdeci">QString defaultText</div><div class="ttdoc">Texte utilisé lorsque l'utilisateur retourne en mode texte sans saisie préalable.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00089">mainwindow.h:89</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ad3ecb130f729bcf339211e9644ba52d4"><div class="ttname"><a href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">MainWindow::scrollCheckBox</a></div><div class="ttdeci">QCheckBox * scrollCheckBox</div><div class="ttdoc">Case à cocher contrôlant le défilement du texte.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00084">mainwindow.h:84</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Destructeur de la fenêtre principale.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00067">mainwindow.cpp:67</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_af91c8db3fce808f0870503cf1efd6668"><div class="ttname"><a href="classMainWindow.html#af91c8db3fce808f0870503cf1efd6668">MainWindow::openColorPicker</a></div><div class="ttdeci">void openColorPicker()</div><div class="ttdoc">Ouvre la boîte de dialogue permettant de choisir la couleur des LED.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00084">mainwindow.cpp:84</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html"><div class="ttname"><a href="classMatrixDisplay.html">MatrixDisplay</a></div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00030">matrixdisplay.h:31</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a0302e6c92c412afc30490d2b8b951fd1"><div class="ttname"><a href="classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1">MatrixDisplay::setText</a></div><div class="ttdeci">void setText(const QString &amp;text)</div><div class="ttdoc">Met à jour le texte affiché sur la matrice.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00064">matrixdisplay.cpp:64</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a5c0b40d25325bdce30f8c091ca8f545f"><div class="ttname"><a href="classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f">MatrixDisplay::setDisplayMode</a></div><div class="ttdeci">void setDisplayMode(DisplayMode mode)</div><div class="ttdoc">Bascule entre les modes texte et horloge.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00080">matrixdisplay.cpp:80</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a6a8fa0adf7f04355140784d7c7d4b337"><div class="ttname"><a href="classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337">MatrixDisplay::setColor</a></div><div class="ttdeci">void setColor(const QColor &amp;color)</div><div class="ttdoc">Modifie la couleur des pixels affichés.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00074">matrixdisplay.cpp:74</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917"><div class="ttname"><a href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">MatrixDisplay::Text</a></div><div class="ttdeci">@ Text</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00039">matrixdisplay.h:39</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984"><div class="ttname"><a href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984">MatrixDisplay::Clock</a></div><div class="ttdeci">@ Clock</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00041">matrixdisplay.h:40</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_abb985f8b2e15c1e97733721f3c2d53ee"><div class="ttname"><a href="classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee">MatrixDisplay::requiresScrolling</a></div><div class="ttdeci">bool requiresScrolling() const</div><div class="ttdoc">Indique si le texte courant dépasse la largeur affichable.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00231">matrixdisplay.cpp:231</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_ae27e81bf0ab12c9180a0a9a429cceb66"><div class="ttname"><a href="classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66">MatrixDisplay::setScrollEnabled</a></div><div class="ttdeci">void setScrollEnabled(bool enabled)</div><div class="ttdoc">Active ou désactive le défilement du texte en mode texte.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00099">matrixdisplay.cpp:99</a></div></div>
+<div class="ttc" id="amainwindow_8h_html"><div class="ttname"><a href="mainwindow_8h.html">mainwindow.h</a></div><div class="ttdoc">Déclaration de la classe MainWindow pour l'interface principale de l'application.</div></div>
+<div class="ttc" id="amatrixdisplay_8h_html"><div class="ttname"><a href="matrixdisplay_8h.html">matrixdisplay.h</a></div><div class="ttdoc">Déclaration de la classe MatrixDisplay pour l'affichage sur une matrice LED.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

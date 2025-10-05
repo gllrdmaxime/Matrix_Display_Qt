@@ -1,9 +1,14 @@
 /**
  * @file mainwindow.cpp
- * @brief 
+ * @brief Implémentation de la classe MainWindow pour l'interface principale de l'application.
+ * Cette classe hérite de QMainWindow et gère l'interface utilisateur principale,
+ * y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur
+ * et le contrôle du mode horloge.
  */
+
 #include "headers/mainwindow.h"
 #include "headers/matrixdisplay.h"
+
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QLineEdit>

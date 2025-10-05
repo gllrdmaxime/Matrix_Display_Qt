@@ -100,6 +100,9 @@ $(document).ready(function(){initNavTree('matrixdisplay_8cpp.html',''); initResi
   <div class="headertitle"><div class="title">Référence du fichier matrixdisplay.cpp</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implémentation de la classe <a class="el" href="classMatrixDisplay.html">MatrixDisplay</a> pour l'affichage sur une matrice LED.  
+<a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="matrixdisplay_8h_source.html">headers/matrixdisplay.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="matrixfont_8h_source.html">headers/matrixfont.h</a>&quot;</code><br />
 <code>#include &lt;QPainter&gt;</code><br />
@@ -108,23 +111,36 @@ $(document).ready(function(){initNavTree('matrixdisplay_8cpp.html',''); initResi
 <code>#include &lt;QSizePolicy&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
-</div><table class="memberdecls">
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de matrixdisplay.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrixdisplay_8cpp__incl.png" border="0" usemap="#amatrixdisplay_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="matrixdisplay_8cpp_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a73280bb151fd1e9479168c7fff1ff798" id="r_a73280bb151fd1e9479168c7fff1ff798"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#a73280bb151fd1e9479168c7fff1ff798">kMaxHeightUsage</a> = 0.95f</td></tr>
+<tr class="memdesc:a73280bb151fd1e9479168c7fff1ff798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inclusions nécessaires.  <br /></td></tr>
 <tr class="separator:a73280bb151fd1e9479168c7fff1ff798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025a0e71eaf8a7c8e2ffced4651298c2" id="r_a025a0e71eaf8a7c8e2ffced4651298c2"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a> = 2.0f</td></tr>
 <tr class="separator:a025a0e71eaf8a7c8e2ffced4651298c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a214a8c89d183de55e752cd23abae548d" id="r_a214a8c89d183de55e752cd23abae548d"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a> = 36.0f</td></tr>
 <tr class="separator:a214a8c89d183de55e752cd23abae548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6d00592977f6104a7f63853344dbb1" id="r_a1b6d00592977f6104a7f63853344dbb1"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#a1b6d00592977f6104a7f63853344dbb1">kMatrixCols</a> = 100</td></tr>
-<tr class="separator:a1b6d00592977f6104a7f63853344dbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a1d802d15be605b1764e7304f42ee5" id="r_ac6a1d802d15be605b1764e7304f42ee5"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#ac6a1d802d15be605b1764e7304f42ee5">kMatrixRows</a> = <a class="el" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a> + 2</td></tr>
-<tr class="separator:ac6a1d802d15be605b1764e7304f42ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e9fe067be400e31a0851d015d8a5c8" id="r_af7e9fe067be400e31a0851d015d8a5c8"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> = 100</td></tr>
+<tr class="separator:af7e9fe067be400e31a0851d015d8a5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c430513225d7cc1726429cb72b00ad" id="r_ad6c430513225d7cc1726429cb72b00ad"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> = <a class="el" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a> + 4</td></tr>
+<tr class="separator:ad6c430513225d7cc1726429cb72b00ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde102e3104550e362a990bf98be4ee3" id="r_acde102e3104550e362a990bf98be4ee3"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a> = 12.0f</td></tr>
 <tr class="separator:acde102e3104550e362a990bf98be4ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des variables</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentation de la classe <a class="el" href="classMatrixDisplay.html">MatrixDisplay</a> pour l'affichage sur une matrice LED. </p>
+<p>Cette classe hérite de QWidget et permet d'afficher du texte ou l'heure actuelle sur une matrice LED simulée. Elle gère également le défilement du texte. La couleur des pixels, le mode d'affichage (texte ou horloge) et l'activation du défilement peuvent être configurés. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+</div><h2 class="groupheader">Documentation des variables</h2>
 <a id="acde102e3104550e362a990bf98be4ee3" name="acde102e3104550e362a990bf98be4ee3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acde102e3104550e362a990bf98be4ee3">&#9670;&#160;</a></span>kDefaultCellSize</h2>
 
@@ -145,49 +161,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a1b6d00592977f6104a7f63853344dbb1" name="a1b6d00592977f6104a7f63853344dbb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b6d00592977f6104a7f63853344dbb1">&#9670;&#160;</a></span>kMatrixCols</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int kMatrixCols = 100</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac6a1d802d15be605b1764e7304f42ee5" name="ac6a1d802d15be605b1764e7304f42ee5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a1d802d15be605b1764e7304f42ee5">&#9670;&#160;</a></span>kMatrixRows</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int kMatrixRows = <a class="el" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a> + 2</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00030">30</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
 
 </div>
 </div>
@@ -211,6 +185,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00027">27</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a73280bb151fd1e9479168c7fff1ff798" name="a73280bb151fd1e9479168c7fff1ff798"></a>
@@ -233,6 +209,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Inclusions nécessaires. </p>
+<p>Constantes de configuration pour la matrice LED. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00025">25</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a025a0e71eaf8a7c8e2ffced4651298c2" name="a025a0e71eaf8a7c8e2ffced4651298c2"></a>
@@ -254,6 +235,56 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00026">26</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af7e9fe067be400e31a0851d015d8a5c8" name="af7e9fe067be400e31a0851d015d8a5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e9fe067be400e31a0851d015d8a5c8">&#9670;&#160;</a></span>MatrixCols</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int MatrixCols = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00028">28</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad6c430513225d7cc1726429cb72b00ad" name="ad6c430513225d7cc1726429cb72b00ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c430513225d7cc1726429cb72b00ad">&#9670;&#160;</a></span>MatrixRows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int MatrixRows = <a class="el" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a> + 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00029">29</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
 
 </div>
 </div>

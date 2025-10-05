@@ -636,7 +636,7 @@ HIDE_IN_BODY_DOCS      = NO
 # will be excluded. Set it to YES to include the internal documentation.
 # The default value is: NO.
 
-INTERNAL_DOCS          = NO
+INTERNAL_DOCS          = YES
 
 # With the correct setting of option CASE_SENSE_NAMES Doxygen will better be
 # able to match the capabilities of the underlying filesystem. In case the
@@ -1112,7 +1112,7 @@ EXCLUDE_SYMLINKS       = NO
 # Note that the wildcards are matched against the file with absolute path, so to
 # exclude all test directories for example use the pattern */test/*
 
-EXCLUDE_PATTERNS       =
+EXCLUDE_PATTERNS       = */build/* */.gitignore/* */.vscode/*
 
 # The EXCLUDE_SYMBOLS tag can be used to specify one or more symbol names
 # (namespaces, classes, functions, etc.) that should be excluded from the
@@ -1238,14 +1238,14 @@ FORTRAN_COMMENT_AFTER  = 72
 # also VERBATIM_HEADERS is set to NO.
 # The default value is: NO.
 
-SOURCE_BROWSER         = NO
+SOURCE_BROWSER         = YES
 
 # Setting the INLINE_SOURCES tag to YES will include the body of functions,
 # multi-line macros, enums or list initialized variables directly into the
 # documentation.
 # The default value is: NO.
 
-INLINE_SOURCES         = NO
+INLINE_SOURCES         = YES
 
 # Setting the STRIP_CODE_COMMENTS tag to YES will instruct Doxygen to hide any
 # special comment blocks from generated source code fragments. Normal C, C++ and
@@ -1264,7 +1264,7 @@ REFERENCED_BY_RELATION = NO
 # all documented entities called/used by that function will be listed.
 # The default value is: NO.
 
-REFERENCES_RELATION    = NO
+REFERENCES_RELATION    = YES
 
 # If the REFERENCES_LINK_SOURCE tag is set to YES and SOURCE_BROWSER tag is set
 # to YES then the hyperlinks from functions in REFERENCES_RELATION and
@@ -2561,7 +2561,7 @@ SKIP_FUNCTION_MACROS   = YES
 # the path). If a tag file is not located in the directory in which Doxygen is
 # run, you must also specify the path to the tagfile here.
 
-TAGFILES               =
+TAGFILES               = doc_doxygen/qt6.tags=https://doc.qt.io/qt-6/
 
 # When a file name is specified after GENERATE_TAGFILE, Doxygen will create a
 # tag file that is based on the input files it reads. See section "Linking to
@@ -2607,7 +2607,7 @@ HIDE_UNDOC_RELATIONS   = YES
 # set to NO
 # The default value is: NO.
 
-HAVE_DOT               = NO
+HAVE_DOT               = YES
 
 # The DOT_NUM_THREADS specifies the number of dot invocations Doxygen is allowed
 # to run in parallel. When set to 0 Doxygen will base this on the number of

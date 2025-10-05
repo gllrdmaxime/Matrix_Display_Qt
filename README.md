@@ -1,6 +1,6 @@
 # Matrix Display Application
 
-This project is a Qt 6 application that simulates a fixed-grid LED matrix capable of rendering text or a digital clock.
+This project is a Qt 6 application developed in C++ that simulates a fixed-grid LED matrix. It can render text with optional scrolling or display a digital clock. The project is built using CMake and includes Doxygen-ready comments for generating API documentation.
 
 ## Features
 
@@ -12,13 +12,14 @@ This project is a Qt 6 application that simulates a fixed-grid LED matrix capab
 
 ## Project Structure
 
-- [CMakeLists.txt](CMakeLists.txt)
 - [headers/mainwindow.h](headers/mainwindow.h)
 - [headers/matrixdisplay.h](headers/matrixdisplay.h)
 - [headers/matrixfont.h](headers/matrixfont.h)
 - [src/main.cpp](src/main.cpp)
 - [src/mainwindow.cpp](src/mainwindow.cpp)
 - [src/matrixdisplay.cpp](src/matrixdisplay.cpp)
+- [CMakeLists.txt](CMakeLists.txt)
+- [Doxyfile](Doxyfile)
 
 ## Build Instructions
 
@@ -27,6 +28,13 @@ mkdir -p build
 cd build
 cmake ..
 cmake --build .
+```
+
+## Build Clean
+
+```sh
+cd build
+make clean
 ```
 
 ## Run

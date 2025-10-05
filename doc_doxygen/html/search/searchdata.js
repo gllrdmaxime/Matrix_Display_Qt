@@ -6,7 +6,8 @@ var indexSectionsWithContent =
   3: "cmoprstu~",
   4: "cdkmpst",
   5: "d",
-  6: "ct"
+  6: "ct",
+  7: "p"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "enums",
-  6: "enumvalues"
+  6: "enumvalues",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Fonctions",
   4: "Variables",
   5: "Énumérations",
-  6: "Valeurs énumérées"
+  6: "Valeurs énumérées",
+  7: "Pages"
 };
 

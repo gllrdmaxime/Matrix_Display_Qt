@@ -16,9 +16,24 @@
 #include <vector>
 #include <string>
 
+
+/**
+ * @brief Nombre de colonnes par caractère dans la matrice.
+ */
 const int CHAR_COLS = 15;
+
+/**
+ * @brief Nombre de lignes par caractère dans la matrice.
+ */
 const int CHAR_ROWS = 8;
 
+
+/**
+ * @brief Police de caractères matricielle.
+ *
+ * Chaque entrée de la map associe un caractère à sa représentation matricielle.
+ * Les caractères non définis dans cette map seront ignorés lors de l'affichage.
+ */
 inline std::map<char, std::vector<std::string>> matrix_font ={
      {'A', {
         "000011111100000",

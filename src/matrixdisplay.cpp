@@ -1,17 +1,31 @@
+/**
+ * @file matrixdisplay.cpp
+ * @brief Implémentation de la classe MatrixDisplay pour l'affichage sur une matrice LED.
+ * Cette classe hérite de QWidget et permet d'afficher du texte ou l'heure actuelle
+ * sur une matrice LED simulée. Elle gère également le défilement du texte.
+ * La couleur des pixels, le mode d'affichage (texte ou horloge) et
+ * l'activation du défilement peuvent être configurés.
+ */
+
 #include "headers/matrixdisplay.h"
 #include "headers/matrixfont.h"
+
 #include <QPainter>
 #include <QPaintEvent>
 #include <QTime>
 #include <QSizePolicy>
+
 #include <cmath>
 #include <algorithm>
 
+/**
+ * @brief Constantes de configuration pour la matrice LED.
+ */
 static constexpr float kMaxHeightUsage = 0.95f;
 static constexpr float kMinCellSize = 2.0f;
 static constexpr float kMaxCellSize = 36.0f;
-static constexpr int kMatrixCols = 100;
-static constexpr int kMatrixRows = CHAR_ROWS + 2;
+static constexpr int MatrixCols = 100;
+static constexpr int MatrixRows = CHAR_ROWS + 4;
 static constexpr float kDefaultCellSize = 12.0f;
 
 /**
@@ -29,8 +43,8 @@ MatrixDisplay::MatrixDisplay(QWidget *parent)
     setAutoFillBackground(false);
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-    const int defaultWidth = static_cast<int>(kMatrixCols * kDefaultCellSize);
-    const int defaultHeight = static_cast<int>(kMatrixRows * kDefaultCellSize);
+    const int defaultWidth = static_cast<int>(MatrixCols * kDefaultCellSize);
+    const int defaultHeight = static_cast<int>(MatrixRows * kDefaultCellSize);
     setMinimumSize(defaultWidth / 2, defaultHeight / 2);
     setBaseSize(defaultWidth, defaultHeight);
 
@@ -41,8 +55,8 @@ MatrixDisplay::MatrixDisplay(QWidget *parent)
 QSize MatrixDisplay::sizeHint() const
 {
     return {
-        static_cast<int>(kMatrixCols * kDefaultCellSize),
-        static_cast<int>(kMatrixRows * kDefaultCellSize)
+        static_cast<int>(MatrixCols * kDefaultCellSize),
+        static_cast<int>(MatrixRows * kDefaultCellSize)
     };
 }
 
@@ -110,7 +124,7 @@ void MatrixDisplay::setScrollEnabled(bool enabled)
  */
 float MatrixDisplay::calculateCellSize() const
 {
-    if (kMatrixRows <= 0)
+    if (MatrixRows <= 0)
         return kMinCellSize;
 
     int w = width();
@@ -119,8 +133,8 @@ float MatrixDisplay::calculateCellSize() const
         return kMinCellSize;
 
     float usableHeight = h * kMaxHeightUsage;
-    float sizeByHeight = usableHeight / static_cast<float>(kMatrixRows);
-    float sizeByWidth = static_cast<float>(w) / static_cast<float>(kMatrixCols);
+    float sizeByHeight = usableHeight / static_cast<float>(MatrixRows);
+    float sizeByWidth = static_cast<float>(w) / static_cast<float>(MatrixCols);
 
     float chosen = std::min(sizeByHeight, sizeByWidth);
 
@@ -142,7 +156,10 @@ float MatrixDisplay::calculateCellSize() const
 void MatrixDisplay::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
-    restartScrollIfNeeded();
+    if (currentMode == Text){
+        restartScrollIfNeeded();
+    }
+    onTimeout();
     update();
 }
 
@@ -164,7 +181,7 @@ void MatrixDisplay::restartScrollIfNeeded()
     float totalTextWidthInCols = numChars * charWidthInCols
         + (numChars > 1 ? (numChars - 1) * spacingInCols : 0);
     float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
-    float matrixWidth = kMatrixCols * cellSize;
+    float matrixWidth = MatrixCols * cellSize;
 
     if (totalTextWidthInPixels > matrixWidth) {
         timer->start(50);
@@ -192,7 +209,7 @@ void MatrixDisplay::onTimeout()
         float totalTextWidthInCols = numChars * charWidthInCols
             + (numChars > 1 ? (numChars - 1) * spacingInCols : 0);
         float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
-        float matrixWidth = kMatrixCols * cellSize;
+        float matrixWidth = MatrixCols * cellSize;
 
         if (totalTextWidthInPixels > matrixWidth) {
             int wrapWidth = static_cast<int>(totalTextWidthInPixels + matrixWidth);
@@ -222,7 +239,7 @@ bool MatrixDisplay::requiresScrolling() const
     const float totalTextWidthInCols = numChars * charWidthInCols
         + (numChars > 1 ? (numChars - 1) * spacingInCols : 0.0f);
     const float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
-    const float matrixWidth = kMatrixCols * cellSize;
+    const float matrixWidth = MatrixCols * cellSize;
 
     return totalTextWidthInPixels > matrixWidth;
 }
@@ -232,7 +249,7 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
     Q_UNUSED(event);
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing, true);
-    painter.fillRect(rect(), Qt::black);
+    painter.fillRect(rect(), Qt::darkGray);
 
     if (currentText.isEmpty()) {
         return;
@@ -243,8 +260,8 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
     const float pixelOffset = (cellSize - pixelDiameter) / 2.0f;
     const float charWidthInCols = CHAR_COLS;
     const float spacingInCols = 1.0f;
-    float matrixWidth = kMatrixCols * cellSize;
-    float matrixHeight = kMatrixRows * cellSize;
+    float matrixWidth = MatrixCols * cellSize;
+    float matrixHeight = MatrixRows * cellSize;
     float xBase = (width() - matrixWidth) / 2.0f;
     float yOffset = (height() - matrixHeight) / 2.0f;
 
@@ -260,8 +277,17 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
                         ? (xBase + matrixWidth - scrollOffset)
                         : (xBase + (matrixWidth - totalTextWidthInPixels) / 2.0f);
     
-    painter.setBrush(pixelColor);
+    
     painter.setPen(Qt::NoPen);
+
+    painter.setBrush(Qt::black);
+    for (int row = 0; row < MatrixRows; ++row) {
+        for (int col = 0; col < MatrixCols; ++col) {
+            float x = xBase + col * cellSize + pixelOffset;
+            float y = yOffset + row * cellSize + pixelOffset;
+            painter.drawEllipse(QRectF(x, y, pixelDiameter, pixelDiameter));
+        }
+    }
 
     for (int i = 0; i < numChars; ++i) {
         char c = currentText[i].toLatin1();
@@ -270,12 +296,13 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
         }
         const auto &charMap = matrix_font.at(c);
         float charStartX = i * (charWidthInCols + spacingInCols) * cellSize;
-
-        for (int row = 0; row < CHAR_ROWS; ++row) {
+        
+        for (int row = 0 ; row < CHAR_ROWS ; ++row) {
             for (int col = 0; col < CHAR_COLS; ++col) {
                 if (col < charMap[row].length() && charMap[row][col] == '1') {
                     float x = xOffset + charStartX + col * cellSize + pixelOffset;
-                    float y = yOffset + row * cellSize + pixelOffset;
+                    float y = yOffset + (row + (MatrixRows - CHAR_ROWS) / 2.0f) * cellSize + pixelOffset;
+                    painter.setBrush(pixelColor);
                     if (x + pixelDiameter < xBase || x > xBase + matrixWidth)
                         continue;
                     painter.drawEllipse(QRectF(x, y, pixelDiameter, pixelDiameter));
