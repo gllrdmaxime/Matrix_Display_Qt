@@ -17,6 +17,7 @@
 #include <QColorDialog>
 #include <QShortcut>
 #include <QKeySequence>
+#include <QLabel>
 
 /**
  * @brief Constructeur de la classe MainWindow
@@ -53,6 +54,8 @@ MainWindow::MainWindow(QWidget *parent)
     scrollCheckBox = new QCheckBox("Scroll", this);
     controlsLayout->addWidget(scrollCheckBox);
 
+    QLabel *speedLabel = new QLabel("Speed:", this);
+    controlsLayout->addWidget(speedLabel);
     speedSlider = new QSlider(Qt::Horizontal, this);
     speedSlider->setRange(1, 5);
     speedSlider->setValue(2);
@@ -63,6 +66,7 @@ MainWindow::MainWindow(QWidget *parent)
             matrixDisplay->setScrollInterval(value);
         }
     });
+
 
     controlsLayout->addWidget(speedSlider);
 
