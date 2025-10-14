@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('mainwindow_8cpp.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p>Implémentation de la classe <a class="el" href="classMainWindow.html" title="Fenêtre principale qui encapsule l&#39;affichage matriciel et ses contrôles.">MainWindow</a> pour l'interface principale de l'application.  
+<p>Implémentation de la classe <a class="el" href="classMainWindow.html">MainWindow</a> pour l'interface principale de l'application.  
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="mainwindow_8h_source.html">headers/mainwindow.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="matrixdisplay_8h_source.html">headers/matrixdisplay.h</a>&quot;</code><br />
@@ -112,46 +112,57 @@ $(document).ready(function(){initNavTree('mainwindow_8cpp.html',''); initResizab
 <code>#include &lt;QWidget&gt;</code><br />
 <code>#include &lt;QCheckBox&gt;</code><br />
 <code>#include &lt;QColorDialog&gt;</code><br />
+<code>#include &lt;QShortcut&gt;</code><br />
+<code>#include &lt;QKeySequence&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de mainwindow.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="mainwindow_8cpp__incl.png" border="0" usemap="#amainwindow_8cpp" alt=""/></div>
 <map name="amainwindow_8cpp" id="amainwindow_8cpp">
-<area shape="rect" title="Implémentation de la classe MainWindow pour l&#39;interface principale de l&#39;application." alt="" coords="617,5,747,31"/>
-<area shape="rect" href="mainwindow_8h.html" title="Déclaration de la classe MainWindow pour l&#39;interface principale de l&#39;application." alt="" coords="41,79,213,104"/>
-<area shape="poly" title=" " alt="" coords="617,30,227,80,227,75,616,25"/>
-<area shape="rect" href="matrixdisplay_8h.html" title="Déclaration de la classe MatrixDisplay pour l&#39;affichage sur une matrice LED." alt="" coords="289,79,467,104"/>
-<area shape="poly" title=" " alt="" coords="634,33,441,78,440,73,633,28"/>
-<area shape="rect" title=" " alt="" coords="240,152,319,177"/>
-<area shape="poly" title=" " alt="" coords="617,22,526,24,424,33,376,41,334,51,301,64,279,80,272,93,269,108,273,139,268,139,264,108,267,91,275,77,298,59,333,46,375,36,424,28,526,19,616,16"/>
-<area shape="rect" title=" " alt="" coords="492,79,603,104"/>
-<area shape="poly" title=" " alt="" coords="662,33,583,74,580,70,659,28"/>
-<area shape="rect" title=" " alt="" coords="627,79,737,104"/>
-<area shape="poly" title=" " alt="" coords="685,31,685,65,679,65,679,31"/>
-<area shape="rect" title=" " alt="" coords="761,79,845,104"/>
-<area shape="poly" title=" " alt="" coords="703,28,773,69,771,74,700,33"/>
-<area shape="rect" title=" " alt="" coords="870,79,977,104"/>
-<area shape="poly" title=" " alt="" coords="722,28,872,72,870,77,720,33"/>
-<area shape="rect" title=" " alt="" coords="1001,79,1099,104"/>
-<area shape="poly" title=" " alt="" coords="742,28,988,75,987,81,741,33"/>
-<area shape="rect" title=" " alt="" coords="1123,79,1231,104"/>
-<area shape="poly" title=" " alt="" coords="748,25,1109,76,1109,81,747,30"/>
-<area shape="rect" title=" " alt="" coords="5,152,121,177"/>
-<area shape="poly" title=" " alt="" coords="119,106,85,144,81,140,115,103"/>
-<area shape="rect" title=" " alt="" coords="145,152,216,177"/>
-<area shape="poly" title=" " alt="" coords="138,103,166,140,162,143,134,106"/>
-<area shape="poly" title=" " alt="" coords="347,107,227,150,225,145,345,102"/>
-<area shape="poly" title=" " alt="" coords="364,106,308,146,305,142,361,102"/>
-<area shape="rect" title=" " alt="" coords="438,152,505,177"/>
-<area shape="poly" title=" " alt="" coords="395,102,447,141,444,146,391,106"/>
-<area shape="rect" title=" " alt="" coords="343,152,413,177"/>
-<area shape="poly" title=" " alt="" coords="381,104,381,138,375,138,375,104"/>
+<area shape="rect" title="Implémentation de la classe MainWindow pour l&#39;interface principale de l&#39;application." alt="" coords="793,5,923,31"/>
+<area shape="rect" href="mainwindow_8h.html" title="Déclaration de la classe MainWindow pour l&#39;interface principale de l&#39;application." alt="" coords="420,79,592,104"/>
+<area shape="poly" title=" " alt="" coords="802,33,577,79,576,73,801,28"/>
+<area shape="rect" title=" " alt="" coords="751,152,858,177"/>
+<area shape="poly" title=" " alt="" coords="793,22,757,27,720,38,686,55,659,80,653,92,653,103,659,112,670,121,701,137,739,148,737,153,699,141,667,126,655,116,648,104,648,91,655,77,683,50,718,33,755,22,792,17"/>
+<area shape="rect" href="matrixdisplay_8h.html" title="Déclaration de la classe MatrixDisplay pour l&#39;affichage sur une matrice LED." alt="" coords="146,79,325,104"/>
+<area shape="poly" title=" " alt="" coords="793,29,338,81,338,76,792,24"/>
+<area shape="rect" title=" " alt="" coords="5,152,84,177"/>
+<area shape="poly" title=" " alt="" coords="792,22,640,24,449,32,265,50,190,64,135,81,114,93,94,109,63,143,59,139,90,105,111,89,133,76,189,59,264,45,448,27,640,19,792,17"/>
+<area shape="rect" title=" " alt="" coords="668,79,779,104"/>
+<area shape="poly" title=" " alt="" coords="838,33,759,74,756,70,835,28"/>
+<area shape="rect" title=" " alt="" coords="803,79,913,104"/>
+<area shape="poly" title=" " alt="" coords="861,31,861,65,855,65,855,31"/>
+<area shape="rect" title=" " alt="" coords="937,79,1021,104"/>
+<area shape="poly" title=" " alt="" coords="879,28,949,69,947,74,876,33"/>
+<area shape="rect" title=" " alt="" coords="1045,79,1143,104"/>
+<area shape="poly" title=" " alt="" coords="897,28,1043,72,1042,77,895,33"/>
+<area shape="rect" title=" " alt="" coords="1167,79,1275,104"/>
+<area shape="poly" title=" " alt="" coords="917,28,1153,74,1152,79,916,33"/>
+<area shape="rect" title=" " alt="" coords="1299,79,1385,104"/>
+<area shape="poly" title=" " alt="" coords="924,24,1084,45,1285,76,1285,81,1084,50,923,30"/>
+<area shape="rect" title=" " alt="" coords="1409,79,1528,104"/>
+<area shape="poly" title=" " alt="" coords="924,23,1130,44,1396,76,1396,81,1130,49,923,28"/>
+<area shape="rect" title=" " alt="" coords="389,152,505,177"/>
+<area shape="poly" title=" " alt="" coords="498,106,467,143,463,140,494,103"/>
+<area shape="rect" title=" " alt="" coords="295,152,365,177"/>
+<area shape="poly" title=" " alt="" coords="479,106,373,149,371,144,477,102"/>
+<area shape="rect" title=" " alt="" coords="530,152,599,177"/>
+<area shape="poly" title=" " alt="" coords="518,103,549,140,545,143,514,106"/>
+<area shape="poly" title=" " alt="" coords="555,101,744,146,742,151,553,107"/>
+<area shape="rect" title=" " alt="" coords="624,152,727,177"/>
+<area shape="poly" title=" " alt="" coords="534,102,636,144,634,149,532,106"/>
+<area shape="poly" title=" " alt="" coords="252,102,305,141,302,146,249,106"/>
+<area shape="poly" title=" " alt="" coords="206,107,90,149,88,144,204,102"/>
+<area shape="rect" title=" " alt="" coords="109,152,175,177"/>
+<area shape="poly" title=" " alt="" coords="222,106,170,146,166,141,219,102"/>
+<area shape="rect" title=" " alt="" coords="200,152,271,177"/>
+<area shape="poly" title=" " alt="" coords="238,104,238,138,233,138,233,104"/>
 </map>
 </div>
 </div>
 <p><a href="mainwindow_8cpp_source.html">Aller au code source de ce fichier.</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Implémentation de la classe <a class="el" href="classMainWindow.html" title="Fenêtre principale qui encapsule l&#39;affichage matriciel et ses contrôles.">MainWindow</a> pour l'interface principale de l'application. </p>
+<div class="textblock"><p>Implémentation de la classe <a class="el" href="classMainWindow.html">MainWindow</a> pour l'interface principale de l'application. </p>
 <p>Cette classe hérite de QMainWindow et gère l'interface utilisateur principale, y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur et le contrôle du mode horloge. </p>
 
 <p class="definition">Définition dans le fichier <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>

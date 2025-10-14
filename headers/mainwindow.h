@@ -1,16 +1,11 @@
-/**
- * @file mainwindow.h
- * @brief Déclaration de la classe MainWindow pour l'interface principale de l'application.
- * Cette classe hérite de QMainWindow et gère l'interface utilisateur principale,
- * y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur
- * et le contrôle du mode horloge.
- */
-
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QString>
+#include <QSlider>
+#include <QPushButton>
+#include <QComboBox>
 
 class MatrixDisplay;
 class QLineEdit;
@@ -19,9 +14,13 @@ class QCheckBox;
 
 
 /**
-* @class MainWindow
-* @brief Fenêtre principale qui encapsule l'affichage matriciel et ses contrôles.
-*/
+ * @class MainWindow
+ * @file mainwindow.h
+ * @brief Déclaration de la classe MainWindow pour l'interface principale de l'application.
+ * Cette classe hérite de QMainWindow et gère l'interface utilisateur principale,
+ * y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur
+ * et le contrôle du mode horloge.
+ */
 class MainWindow : public QMainWindow
 {
     /**
@@ -57,6 +56,16 @@ private slots:
      */
     void toggleClock(bool checked);
 
+    /**
+     * @brief Affiche ou masque le layout de contrôle (saisie, boutons, etc.).
+     */
+    void toggleControlsVisibility();
+
+    /**
+     * @brief Affiche le control de la vitesse si le scroll est activé
+     */
+    void toggleSpeedControlVisibility();
+
 private:
     /**
      * @brief Widget affichant la matrice LED.
@@ -87,5 +96,20 @@ private:
      * @brief Texte utilisé lorsque l'utilisateur retourne en mode texte sans saisie préalable.
      */
     QString defaultText;
+
+    /**
+     * @brief Ajout d'un widget de controls pour contenir mon layout et pouvoir le faire disparaitres avec un raccourci clavier.
+     */
+    QWidget *controlsWidget = nullptr;
+
+    /**
+     * @brief Slider pour ajuster la vitesse de défilement.
+     */
+    QSlider *speedSlider = nullptr;
+
+    /**
+     * @brief Bouton pour mettre à jour le texte affiché sur la matrice.
+     */
+    QPushButton *updateButton = nullptr;
 };
 #endif // MAINWINDOW_H

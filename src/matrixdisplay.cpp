@@ -27,6 +27,7 @@ static constexpr float kMaxCellSize = 36.0f;
 static constexpr int MatrixCols = 100;
 static constexpr int MatrixRows = CHAR_ROWS + 4;
 static constexpr float kDefaultCellSize = 12.0f;
+static constexpr int defaultScrollIntervalMs = 50;
 
 /**
  * @brief Constructeur de la classe MatrixDisplay
@@ -114,6 +115,18 @@ void MatrixDisplay::setScrollEnabled(bool enabled)
     update();
 }
 
+void MatrixDisplay::setScrollInterval(int interval)
+{
+    if (interval <= 0) {
+        return;
+    }
+    if (timer->isActive()) {
+        timer->stop();
+        scrollIntervalMs = (2.0f/interval * defaultScrollIntervalMs);
+        timer->start(scrollIntervalMs);
+    }
+}
+
 /**
  * @brief Calcule une taille de cellule:
  * - Limite l'occupation verticale (kMaxHeightUsage).
@@ -168,26 +181,14 @@ void MatrixDisplay::restartScrollIfNeeded()
 {
     timer->stop();
     scrollOffset = 0.0f;
+
     if (currentMode != Text || !scrollEnabled)
         return;
 
-    const float cellSize = calculateCellSize();
-    const float charWidthInCols = CHAR_COLS;
-    const float spacingInCols = 1.0f;
-    int numChars = currentText.length();
-    if (numChars == 0)
+    if (currentText.isEmpty())
         return;
 
-    float totalTextWidthInCols = numChars * charWidthInCols
-        + (numChars > 1 ? (numChars - 1) * spacingInCols : 0);
-    float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
-    float matrixWidth = MatrixCols * cellSize;
-
-    if (totalTextWidthInPixels > matrixWidth) {
-        timer->start(50);
-    } else {
-        scrollOffset = 0;
-    }
+    timer->start(scrollIntervalMs);
 }
 
 void MatrixDisplay::onTimeout()
@@ -204,26 +205,21 @@ void MatrixDisplay::onTimeout()
     } else if (currentMode == Text && scrollEnabled) {
         const float cellSize = calculateCellSize();
         const float charWidthInCols = CHAR_COLS;
-        const float spacingInCols = 1.0f;
         int numChars = currentText.length();
         float totalTextWidthInCols = numChars * charWidthInCols
-            + (numChars > 1 ? (numChars - 1) * spacingInCols : 0);
+            + (numChars > 1 ? (numChars - 1) : 0);
         float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
         float matrixWidth = MatrixCols * cellSize;
 
-        if (totalTextWidthInPixels > matrixWidth) {
-            int wrapWidth = static_cast<int>(totalTextWidthInPixels + matrixWidth);
-            if (wrapWidth > 0) {
-                scrollOffset += cellSize;
-                if (scrollOffset >= wrapWidth) {
-                    scrollOffset = std::fmod(scrollOffset, wrapWidth);
-                }
+        int wrapWidth = static_cast<int>(totalTextWidthInPixels + matrixWidth);
+        if (wrapWidth > 0) {
+            scrollOffset += cellSize;
+            if (scrollOffset >= wrapWidth) {
+                scrollOffset = std::fmod(scrollOffset, wrapWidth);
             }
-            update();
-        } else {
-            timer->stop();
-            scrollOffset = 0;
         }
+        update();
+       
     }
 }
 
@@ -234,10 +230,9 @@ bool MatrixDisplay::requiresScrolling() const
 
     const float cellSize = calculateCellSize();
     const float charWidthInCols = CHAR_COLS;
-    const float spacingInCols = 1.0f;
     const int numChars = currentText.length();
     const float totalTextWidthInCols = numChars * charWidthInCols
-        + (numChars > 1 ? (numChars - 1) * spacingInCols : 0.0f);
+        + (numChars > 1 ? (numChars - 1) : 0.0f);
     const float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
     const float matrixWidth = MatrixCols * cellSize;
 
@@ -259,7 +254,6 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
     const float pixelDiameter = cellSize * 0.8f;
     const float pixelOffset = (cellSize - pixelDiameter) / 2.0f;
     const float charWidthInCols = CHAR_COLS;
-    const float spacingInCols = 1.0f;
     float matrixWidth = MatrixCols * cellSize;
     float matrixHeight = MatrixRows * cellSize;
     float xBase = (width() - matrixWidth) / 2.0f;
@@ -269,10 +263,10 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
 
     int numChars = currentText.length();
     float totalTextWidthInCols = numChars * charWidthInCols
-        + (numChars > 1 ? (numChars - 1) * spacingInCols : 0);
+        + (numChars > 1 ? (numChars - 1) : 0);
     float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
 
-    bool isScrolling = (currentMode == Text) && scrollEnabled && (totalTextWidthInPixels > matrixWidth);
+    bool isScrolling = (currentMode == Text) && scrollEnabled;
     float xOffset = isScrolling
                         ? (xBase + matrixWidth - scrollOffset)
                         : (xBase + (matrixWidth - totalTextWidthInPixels) / 2.0f);
@@ -295,7 +289,7 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
             continue;
         }
         const auto &charMap = matrix_font.at(c);
-        float charStartX = i * (charWidthInCols + spacingInCols) * cellSize;
+        float charStartX = i * (charWidthInCols) * cellSize;
         
         for (int row = 0 ; row < CHAR_ROWS ; ++row) {
             for (int col = 0; col < CHAR_COLS; ++col) {

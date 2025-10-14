@@ -1,5 +1,5 @@
 <map id="MainWindow" name="MainWindow">
-<area shape="rect" id="Node000001" title="Fenêtre principale qui encapsule l&#39;affichage matriciel et ses contrôles." alt="" coords="55,168,162,193"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="55,168,162,193"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,121,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,117,105,166,100,169,74,119"/>
 <area shape="rect" id="Node000003" href="$classMatrixDisplay.html" title=" " alt="" coords="145,80,259,105"/>

@@ -5,7 +5,6 @@
  * y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur
  * et le contrôle du mode horloge.
  */
-
 #include "headers/mainwindow.h"
 #include "headers/matrixdisplay.h"
 
@@ -16,6 +15,8 @@
 #include <QWidget>
 #include <QCheckBox>
 #include <QColorDialog>
+#include <QShortcut>
+#include <QKeySequence>
 
 /**
  * @brief Constructeur de la classe MainWindow
@@ -32,13 +33,15 @@ MainWindow::MainWindow(QWidget *parent)
     matrixDisplay = new MatrixDisplay(this);
     mainLayout->addWidget(matrixDisplay);
 
-    QHBoxLayout *controlsLayout = new QHBoxLayout();
+    controlsWidget = new QWidget(this);
+
+    QHBoxLayout *controlsLayout = new QHBoxLayout(controlsWidget);
 
     textInput = new QLineEdit(this);
     textInput->setPlaceholderText("Enter text to display");
     controlsLayout->addWidget(textInput);
 
-    QPushButton *updateButton = new QPushButton("Update Text", this);
+    updateButton = new QPushButton("Update Text", this);
     controlsLayout->addWidget(updateButton);
 
     QPushButton *colorButton = new QPushButton("Change Color", this);
@@ -50,13 +53,32 @@ MainWindow::MainWindow(QWidget *parent)
     scrollCheckBox = new QCheckBox("Scroll", this);
     controlsLayout->addWidget(scrollCheckBox);
 
-    mainLayout->addLayout(controlsLayout);
+    speedSlider = new QSlider(Qt::Horizontal, this);
+    speedSlider->setRange(1, 5);
+    speedSlider->setValue(2);
+    speedSlider->setSingleStep(1);
+    speedSlider->setToolTip("Adjust Scroll Speed");
+    connect(speedSlider, &QSlider::valueChanged, [this](int value) {
+        if (matrixDisplay) {
+            matrixDisplay->setScrollInterval(value);
+        }
+    });
+
+    controlsLayout->addWidget(speedSlider);
+
+    mainLayout->addWidget(controlsWidget);
+
+    auto *toggleShortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+H")), this);
+    toggleShortcut->setContext(Qt::ApplicationShortcut);
+    connect(toggleShortcut, &QShortcut::activated, this, &MainWindow::toggleControlsVisibility);
 
     connect(updateButton, &QPushButton::clicked, this, &MainWindow::updateMatrixText);
     connect(textInput, &QLineEdit::returnPressed, this, &MainWindow::updateMatrixText);
     connect(colorButton, &QPushButton::clicked, this, &MainWindow::openColorPicker);
+
     connect(clockCheckBox, &QCheckBox::toggled, this, &MainWindow::toggleClock);
     connect(scrollCheckBox, &QCheckBox::toggled, matrixDisplay, &MatrixDisplay::setScrollEnabled);
+    connect(scrollCheckBox, &QCheckBox::toggled, this, &MainWindow::toggleSpeedControlVisibility);
 
     setWindowTitle("Matrix Display");
     resize(900, 220);
@@ -100,10 +122,17 @@ void MainWindow::toggleClock(bool checked)
 {
     if (checked) {
         scrollCheckBox->setChecked(false);
+        scrollCheckBox->setVisible(false);
         matrixDisplay->setScrollEnabled(false);
         matrixDisplay->setDisplayMode(MatrixDisplay::Clock);
         textInput->setEnabled(false);
+        textInput->setVisible(false);
+        this->updateButton->setVisible(false);
+    
     } else {
+        scrollCheckBox->setVisible(true);
+        textInput->setVisible(true);
+        this->updateButton->setVisible(true);
         matrixDisplay->setDisplayMode(MatrixDisplay::Text);
         if (textInput->text().trimmed().isEmpty()) {
             textInput->setText(defaultText);
@@ -115,4 +144,16 @@ void MainWindow::toggleClock(bool checked)
         }
         textInput->setEnabled(true);
     }
+}
+
+void MainWindow::toggleControlsVisibility()
+{
+    if (!controlsWidget) return;
+    controlsWidget->setVisible(!controlsWidget->isVisible());
+}
+
+void MainWindow::toggleSpeedControlVisibility()
+{
+    if (!speedSlider) return;
+    speedSlider->setVisible(scrollCheckBox->isChecked());
 }

@@ -1,12 +1,3 @@
-/**
- * @file matrixdisplay.h
- * @brief Déclaration de la classe MatrixDisplay pour l'affichage sur une matrice LED.
- * Cette classe hérite de QWidget et permet d'afficher du texte ou l'heure actuelle
- * sur une matrice LED simulée. Elle gère également le défilement du texte.
- * La couleur des pixels, le mode d'affichage (texte ou horloge) et
- * l'activation du défilement peuvent être configurés.
- */
-
 #ifndef MATRIXDISPLAY_H
 #define MATRIXDISPLAY_H
 
@@ -75,6 +66,12 @@ public slots:
      */
     void setScrollEnabled(bool enabled);
 
+    /**
+     * @brief Définit la vitesse de défilement en millisecondes.
+     * @param interval Intervalle entre chaque mise à jour du défilement.
+     */
+    void setScrollInterval(int interval);
+
 protected:
     /** 
      * @brief Dessine la matrice LED et le contenu (texte ou horloge).
@@ -139,5 +136,10 @@ private:
      * @brief Indique si le défilement est autorisé en mode texte.
      */
     bool scrollEnabled;
+
+    /**
+     * @brief Intervalle de défilement en millisecondes.
+     */
+    int scrollIntervalMs = 50;
 };
 #endif // MATRIXDISPLAY_H

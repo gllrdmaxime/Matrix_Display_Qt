@@ -51,6 +51,11 @@ make clean
 ./Matrix_Display
 ```
 
+## Shortcut
+
+|Keys|Description|
+|Ctrl + H| Hide the control Widget|
+
 ## Documentation
 
 Doxygen comments are available. Generate the documentation with the Project Configuration:

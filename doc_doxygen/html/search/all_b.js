@@ -2,11 +2,15 @@ var searchData=
 [
   ['scrollcheckbox_0',['scrollCheckBox',['../classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4',1,'MainWindow']]],
   ['scrollenabled_1',['scrollEnabled',['../classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0',1,'MatrixDisplay']]],
-  ['scrolloffset_2',['scrollOffset',['../classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee',1,'MatrixDisplay']]],
-  ['setcolor_3',['setColor',['../classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337',1,'MatrixDisplay']]],
-  ['setdisplaymode_4',['setDisplayMode',['../classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f',1,'MatrixDisplay']]],
-  ['setscrollenabled_5',['setScrollEnabled',['../classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66',1,'MatrixDisplay']]],
-  ['settext_6',['setText',['../classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1',1,'MatrixDisplay']]],
-  ['sizehint_7',['sizeHint',['../classMatrixDisplay.html#aa4511f7ce6a286c46a25a6623efa2d47',1,'MatrixDisplay']]],
-  ['structure_8',['Project Structure',['../index.html#autotoc_md2',1,'']]]
+  ['scrollintervalms_2',['scrollIntervalMs',['../classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25',1,'MatrixDisplay']]],
+  ['scrolloffset_3',['scrollOffset',['../classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee',1,'MatrixDisplay']]],
+  ['setcolor_4',['setColor',['../classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337',1,'MatrixDisplay']]],
+  ['setdisplaymode_5',['setDisplayMode',['../classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f',1,'MatrixDisplay']]],
+  ['setscrollenabled_6',['setScrollEnabled',['../classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66',1,'MatrixDisplay']]],
+  ['setscrollinterval_7',['setScrollInterval',['../classMatrixDisplay.html#a9729c4abe5da36a1915e37727f5c412e',1,'MatrixDisplay']]],
+  ['settext_8',['setText',['../classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1',1,'MatrixDisplay']]],
+  ['shortcut_9',['Shortcut',['../index.html#autotoc_md7',1,'']]],
+  ['sizehint_10',['sizeHint',['../classMatrixDisplay.html#aa4511f7ce6a286c46a25a6623efa2d47',1,'MatrixDisplay']]],
+  ['speedslider_11',['speedSlider',['../classMainWindow.html#abed2eda4dfad56d1b401b1d893f1b7d4',1,'MainWindow']]],
+  ['structure_12',['Project Structure',['../index.html#autotoc_md2',1,'']]]
 ];
