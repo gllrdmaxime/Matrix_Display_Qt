@@ -4,7 +4,7 @@ This project is a Qt 6 application developed in C++ that simulates a fixed-grid 
 
 ## Features
 
-- Fixed $100 \times 10$ virtual LED grid to mimic a physical display.
+- Fixed $100 \times 12$ virtual LED grid to mimic a physical display.
 - Text mode with optional horizontal scrolling for long strings.
 - Clock mode with blinking separator.
 - Runtime pixel color selection.
