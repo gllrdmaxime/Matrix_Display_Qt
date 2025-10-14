@@ -16,11 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
 </script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -32,19 +34,8 @@
   <td id="projectalign">
    <div id="projectname">PIGI_Qt_G<span id="projectnumber">&#160;1</span>
    </div>
+   <div id="projectbrief">Projet de Programation des Interfaces Graphiques et Interactives en Qt et C++</div>
   </td>
-    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -54,6 +45,22 @@
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -144,16 +151,16 @@ $(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initRe
 </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
 <div class="ttc" id="aclassMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdoc">Fenêtre principale qui encapsule l'affichage matriciel et ses contrôles.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00025">mainwindow.h:26</a></div></div>
-<div class="ttc" id="aclassMainWindow_html_a2ac7dc94189b9755b772cf889c82d924"><div class="ttname"><a href="classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924">MainWindow::toggleClock</a></div><div class="ttdeci">void toggleClock(bool checked)</div><div class="ttdoc">Active ou désactive le mode horloge et gère l'état du défilement.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00097">mainwindow.cpp:97</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a2ac7dc94189b9755b772cf889c82d924"><div class="ttname"><a href="classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924">MainWindow::toggleClock</a></div><div class="ttdeci">void toggleClock(bool checked)</div><div class="ttdoc">Active ou désactive le mode horloge et gère l'état du défilement.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00099">mainwindow.cpp:99</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_a304ff148ce05c05784afb24b76ed3563"><div class="ttname"><a href="classMainWindow.html#a304ff148ce05c05784afb24b76ed3563">MainWindow::matrixDisplay</a></div><div class="ttdeci">MatrixDisplay * matrixDisplay</div><div class="ttdoc">Widget affichant la matrice LED.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00064">mainwindow.h:64</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_a6b51b7c9f36c29a1056fdeec5f563d92"><div class="ttname"><a href="classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92">MainWindow::textInput</a></div><div class="ttdeci">QLineEdit * textInput</div><div class="ttdoc">Champ permettant la saisie du texte utilisateur.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00069">mainwindow.h:69</a></div></div>
-<div class="ttc" id="aclassMainWindow_html_a7c5933cf15ac0d7d2b227204de311f5b"><div class="ttname"><a href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">MainWindow::updateMatrixText</a></div><div class="ttdeci">void updateMatrixText()</div><div class="ttdoc">Synchronise la matrice avec le contenu du champ de saisie.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00072">mainwindow.cpp:72</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a7c5933cf15ac0d7d2b227204de311f5b"><div class="ttname"><a href="classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b">MainWindow::updateMatrixText</a></div><div class="ttdeci">void updateMatrixText()</div><div class="ttdoc">Synchronise la matrice avec le contenu du champ de saisie.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00074">mainwindow.cpp:74</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_a840d28fd8f004fd5a1ea97dd7cbe7e50"><div class="ttname"><a href="classMainWindow.html#a840d28fd8f004fd5a1ea97dd7cbe7e50">MainWindow::colorDialog</a></div><div class="ttdeci">QColorDialog * colorDialog</div><div class="ttdoc">Boîte de dialogue pour la sélection de la couleur des LED.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00074">mainwindow.h:74</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_aa8752d5350d2951a1e7d8eb627e9d70d"><div class="ttname"><a href="classMainWindow.html#aa8752d5350d2951a1e7d8eb627e9d70d">MainWindow::clockCheckBox</a></div><div class="ttdeci">QCheckBox * clockCheckBox</div><div class="ttdoc">Case à cocher contrôlant le mode horloge.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00079">mainwindow.h:79</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_ad2d58a74173162c294ea00bbd62122c4"><div class="ttname"><a href="classMainWindow.html#ad2d58a74173162c294ea00bbd62122c4">MainWindow::defaultText</a></div><div class="ttdeci">QString defaultText</div><div class="ttdoc">Texte utilisé lorsque l'utilisateur retourne en mode texte sans saisie préalable.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00089">mainwindow.h:89</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_ad3ecb130f729bcf339211e9644ba52d4"><div class="ttname"><a href="classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4">MainWindow::scrollCheckBox</a></div><div class="ttdeci">QCheckBox * scrollCheckBox</div><div class="ttdoc">Case à cocher contrôlant le défilement du texte.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00084">mainwindow.h:84</a></div></div>
-<div class="ttc" id="aclassMainWindow_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Destructeur de la fenêtre principale.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00067">mainwindow.cpp:67</a></div></div>
-<div class="ttc" id="aclassMainWindow_html_af91c8db3fce808f0870503cf1efd6668"><div class="ttname"><a href="classMainWindow.html#af91c8db3fce808f0870503cf1efd6668">MainWindow::openColorPicker</a></div><div class="ttdeci">void openColorPicker()</div><div class="ttdoc">Ouvre la boîte de dialogue permettant de choisir la couleur des LED.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00084">mainwindow.cpp:84</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Destructeur de la fenêtre principale.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00069">mainwindow.cpp:69</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_af91c8db3fce808f0870503cf1efd6668"><div class="ttname"><a href="classMainWindow.html#af91c8db3fce808f0870503cf1efd6668">MainWindow::openColorPicker</a></div><div class="ttdeci">void openColorPicker()</div><div class="ttdoc">Ouvre la boîte de dialogue permettant de choisir la couleur des LED.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00086">mainwindow.cpp:86</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html"><div class="ttname"><a href="classMatrixDisplay.html">MatrixDisplay</a></div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00030">matrixdisplay.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

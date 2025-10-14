@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "PIGI_Qt_G", "index.html", [
+    [ "Matrix Display Application", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Liste des classes", "annotated.html", "annotated_dup" ],
       [ "Index des classes", "classes.html", null ],

@@ -1,0 +1,10 @@
+<map id="MatrixDisplay::setDisplayMode" name="MatrixDisplay::setDisplayMode">
+<area shape="rect" id="Node000001" title="Bascule entre les modes texte et horloge." alt="" coords="5,35,231,60"/>
+<area shape="rect" id="Node000002" href="$classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f" title="Gestion des mises à jour temporisées (horloge ou scroll)." alt="" coords="283,5,473,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,32,269,28,269,33,231,37"/>
+<area shape="rect" id="Node000004" href="$classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="279,55,477,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="231,57,265,61,265,66,230,62"/>
+<area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39" title="Calcule la taille d&#39;une cellule en respectant la grille fixe." alt="" coords="525,27,704,67"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,27,512,32,511,37,473,32"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="477,61,511,57,512,62,478,66"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="MainWindow::updateMatrixText" name="MainWindow::updateMatrixText">
+<area shape="rect" id="Node000001" title="Synchronise la matrice avec le contenu du champ de saisie." alt="" coords="5,35,232,60"/>
+<area shape="rect" id="Node000002" href="$classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee" title="Indique si le texte courant dépasse la largeur affichable." alt="" coords="495,5,724,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,38,481,23,481,28,233,43"/>
+<area shape="rect" id="Node000004" href="$classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1" title="Met à jour le texte affiché sur la matrice." alt="" coords="280,60,447,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="232,56,267,60,266,65,232,62"/>
+<area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39" title="Calcule la taille d&#39;une cellule en respectant la grille fixe." alt="" coords="772,27,951,67"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="719,28,759,33,758,38,718,33"/>
+<area shape="rect" id="Node000005" href="$classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="510,55,709,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="447,71,497,71,496,77,447,76"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="709,62,758,56,758,61,709,67"/>
+</map>

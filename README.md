@@ -21,6 +21,14 @@ This project is a Qt 6 application developed in C++ that simulates a fixed-grid 
 - [CMakeLists.txt](CMakeLists.txt)
 - [Doxyfile](Doxyfile)
 
+## Dependencies Installation
+
+```sh
+sudo apt install qt6-base-dev qt6-base-dev-tools qt6-l10n-tools
+sudo apt install cmake ninja-build build-essential
+sudo apt install doxygen graphviz
+```
+
 ## Build Instructions
 
 ```sh

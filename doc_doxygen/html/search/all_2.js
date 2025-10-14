@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['kdefaultcellsize_0',['kDefaultCellSize',['../matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3',1,'matrixdisplay.cpp']]],
-  ['kmaxcellsize_1',['kMaxCellSize',['../matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d',1,'matrixdisplay.cpp']]],
-  ['kmaxheightusage_2',['kMaxHeightUsage',['../matrixdisplay_8cpp.html#a73280bb151fd1e9479168c7fff1ff798',1,'matrixdisplay.cpp']]],
-  ['kmincellsize_3',['kMinCellSize',['../matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2',1,'matrixdisplay.cpp']]]
+  ['calculatecellsize_0',['calculateCellSize',['../classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39',1,'MatrixDisplay']]],
+  ['char_5fcols_1',['CHAR_COLS',['../matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8',1,'matrixfont.h']]],
+  ['char_5frows_2',['CHAR_ROWS',['../matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e',1,'matrixfont.h']]],
+  ['clean_3',['Build Clean',['../index.html#autotoc_md5',1,'']]],
+  ['clock_4',['Clock',['../classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984',1,'MatrixDisplay']]],
+  ['clockcheckbox_5',['clockCheckBox',['../classMainWindow.html#aa8752d5350d2951a1e7d8eb627e9d70d',1,'MainWindow']]],
+  ['colordialog_6',['colorDialog',['../classMainWindow.html#a840d28fd8f004fd5a1ea97dd7cbe7e50',1,'MainWindow']]],
+  ['currentmode_7',['currentMode',['../classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974',1,'MatrixDisplay']]],
+  ['currenttext_8',['currentText',['../classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1',1,'MatrixDisplay']]]
 ];

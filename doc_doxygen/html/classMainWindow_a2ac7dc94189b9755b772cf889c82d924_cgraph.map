@@ -1,0 +1,21 @@
+<map id="MainWindow::toggleClock" name="MainWindow::toggleClock">
+<area shape="rect" id="Node000001" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="5,84,196,109"/>
+<area shape="rect" id="Node000002" href="$classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee" title="Indique si le texte courant dépasse la largeur affichable." alt="" coords="517,5,747,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,81,180,59,243,39,310,28,377,20,504,14,504,19,378,25,310,33,245,45,182,64,129,86"/>
+<area shape="rect" id="Node000004" href="$classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f" title="Bascule entre les modes texte et horloge." alt="" coords="244,55,469,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,83,232,79,232,84,197,88"/>
+<area shape="rect" id="Node000007" href="$classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66" title="Active ou désactive le défilement du texte en mode texte." alt="" coords="269,105,445,145"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="197,104,255,111,255,116,196,110"/>
+<area shape="rect" id="Node000008" href="$classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1" title="Met à jour le texte affiché sur la matrice." alt="" coords="273,169,440,195"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="129,107,182,131,245,154,278,164,277,169,243,159,180,135,127,112"/>
+<area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39" title="Calcule la taille d&#39;une cellule en respectant la grille fixe." alt="" coords="795,47,973,87"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="698,28,782,45,780,50,697,33"/>
+<area shape="rect" id="Node000005" href="$classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f" title="Gestion des mises à jour temporisées (horloge ou scroll)." alt="" coords="537,55,727,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="470,65,523,65,523,70,470,70"/>
+<area shape="rect" id="Node000006" href="$classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="533,105,731,145"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="419,77,523,99,522,104,418,83"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="728,65,781,65,781,70,728,70"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="720,102,782,88,783,93,721,107"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="445,122,519,122,519,127,445,127"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="418,167,522,145,523,150,419,172"/>
+</map>

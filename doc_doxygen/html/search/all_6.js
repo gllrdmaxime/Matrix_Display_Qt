@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['requiresscrolling_0',['requiresScrolling',['../classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee',1,'MatrixDisplay']]],
-  ['resizeevent_1',['resizeEvent',['../classMatrixDisplay.html#a2605cc68abad24e4163b504a91654bbc',1,'MatrixDisplay']]],
-  ['restartscrollifneeded_2',['restartScrollIfNeeded',['../classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90',1,'MatrixDisplay']]]
+  ['kdefaultcellsize_0',['kDefaultCellSize',['../matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3',1,'matrixdisplay.cpp']]],
+  ['kmaxcellsize_1',['kMaxCellSize',['../matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d',1,'matrixdisplay.cpp']]],
+  ['kmaxheightusage_2',['kMaxHeightUsage',['../matrixdisplay_8cpp.html#a73280bb151fd1e9479168c7fff1ff798',1,'matrixdisplay.cpp']]],
+  ['kmincellsize_3',['kMinCellSize',['../matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2',1,'matrixdisplay.cpp']]]
 ];

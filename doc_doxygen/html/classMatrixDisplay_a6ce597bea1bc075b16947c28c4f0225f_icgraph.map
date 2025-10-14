@@ -1,0 +1,13 @@
+<map id="MatrixDisplay::onTimeout" name="MatrixDisplay::onTimeout">
+<area shape="rect" id="Node000001" title="Gestion des mises à jour temporisées (horloge ou scroll)." alt="" coords="763,55,953,80"/>
+<area shape="rect" id="Node000002" href="$classMatrixDisplay.html#a214251689453303e21bf9ea5ee69db6e" title="Constructeur de la matrice LED." alt="" coords="497,5,707,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="778,55,668,33,669,28,779,49"/>
+<area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a2605cc68abad24e4163b504a91654bbc" title="Gère le redimensionnement du widget et ajuste le défilement si nécessaire." alt="" coords="504,55,700,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="749,70,700,70,700,65,749,65"/>
+<area shape="rect" id="Node000004" href="$classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f" title="Bascule entre les modes texte et horloge." alt="" coords="489,104,715,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="779,85,669,107,668,101,778,80"/>
+<area shape="rect" id="Node000005" href="$classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="251,104,441,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="476,119,441,119,441,114,476,114"/>
+<area shape="rect" id="Node000006" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,104,203,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="237,119,203,119,203,114,237,114"/>
+</map>

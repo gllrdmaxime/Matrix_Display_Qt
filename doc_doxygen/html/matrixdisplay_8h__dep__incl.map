@@ -1,0 +1,7 @@
+<map id="matrixdisplay.h" name="matrixdisplay.h">
+<area shape="rect" id="Node000001" title="Déclaration de la classe MatrixDisplay pour l&#39;affichage sur une matrice LED." alt="" coords="88,5,211,31"/>
+<area shape="rect" id="Node000002" href="$mainwindow_8cpp.html" title="Implémentation de la classe MainWindow pour l&#39;interface principale de l&#39;application." alt="" coords="5,79,136,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,42,85,80,82,76,125,38"/>
+<area shape="rect" id="Node000003" href="$matrixdisplay_8cpp.html" title="Implémentation de la classe MatrixDisplay pour l&#39;affichage sur une matrice LED." alt="" coords="161,79,298,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,38,218,76,214,80,170,42"/>
+</map>
