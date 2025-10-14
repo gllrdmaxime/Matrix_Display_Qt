@@ -54,6 +54,7 @@ make clean
 ## Shortcut
 
 |Keys|Description|
+|----|-----------|
 |Ctrl + H| Hide the control Widget|
 
 ## Documentation
