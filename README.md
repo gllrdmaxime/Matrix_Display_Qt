@@ -12,6 +12,7 @@ This project is a Qt 6 application developed in C++ that simulates a fixed-grid 
 
 ## Project Structure
 
+- [doc_doxygen](doc_doxygen)
 - [headers/mainwindow.h](headers/mainwindow.h)
 - [headers/matrixdisplay.h](headers/matrixdisplay.h)
 - [headers/matrixfont.h](headers/matrixfont.h)
@@ -59,7 +60,8 @@ make clean
 
 ## Documentation
 
-Doxygen comments are available. Generate the documentation with the Project Configuration:
+Doxygen documentation are available in the doc_doxygen folder.
+You can generate the documentation with the Project Configuration using this command:
 
 ```sh
 doxygen Doxyfile
