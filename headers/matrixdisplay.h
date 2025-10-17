@@ -1,14 +1,16 @@
 #ifndef MATRIXDISPLAY_H
 #define MATRIXDISPLAY_H
 
+// Inclusion des headers Qt nécessaires
 #include <QWidget>
 #include <QString>
 #include <QColor>
 #include <QTimer>
 
 /**
- * @class MatrixDisplay
  * @file matrixdisplay.h
+ * @author G. Maxime
+ * @class MatrixDisplay
  * @brief Déclaration de la classe MatrixDisplay pour l'affichage sur une matrice LED.
  * Cette classe hérite de QWidget et permet d'afficher du texte ou l'heure actuelle
  * sur une matrice LED simulée. Elle gère également le défilement du texte.
@@ -29,6 +31,14 @@ public:
     enum DisplayMode {
         Text,
         Clock
+    };
+
+    /**
+     * @brief Modes de défilement du texte.
+     */
+    enum ScrollMode {
+        defaultMode,
+        bounceMode
     };
 
     /**
@@ -66,6 +76,12 @@ public slots:
      * @param mode Mode souhaité.
      */
     void setDisplayMode(DisplayMode mode);
+
+    /**
+     * @brief Définit le mode de défilement.
+     * @param mode Mode de défilement souhaité.
+     */
+    void setScrollMode(ScrollMode mode);
 
     /**
      * @brief Active ou désactive le défilement du texte en mode texte.
@@ -153,5 +169,15 @@ private:
      * @brief Intervalle de défilement en millisecondes.
      */
     int scrollIntervalMs = 50;
+
+    /**
+     * @brief Mode de défilement actuel.
+     */
+    ScrollMode scrollMode = defaultMode;
+
+    /**
+     * @brief Direction actuelle du défilement (1 gauche à droite, -1 pour droite à gauche).
+     */
+    int scrollDirection = 1; 
 };
 #endif // MATRIXDISPLAY_H

@@ -1,5 +1,8 @@
 <map id="MainWindow::toggleSpeedControlVisibility" name="MainWindow::toggleSpeedControlVisibility">
-<area shape="rect" id="Node000001" title="Affiche le control de la vitesse si le scroll est activé" alt="" coords="251,5,492,45"/>
+<area shape="rect" id="Node000001" title="Affiche le control de la vitesse si le scroll est activé" alt="" coords="489,5,731,45"/>
 <area shape="rect" id="Node000002" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,13,203,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,28,203,28,203,23,237,23"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,28,203,28,203,23,475,23"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="251,38,441,63"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="476,41,442,44,441,39,475,36"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="237,42,203,38,203,33,237,37"/>
 </map>

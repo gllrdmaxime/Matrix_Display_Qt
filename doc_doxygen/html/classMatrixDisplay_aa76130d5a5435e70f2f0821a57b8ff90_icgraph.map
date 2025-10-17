@@ -1,22 +1,25 @@
 <map id="MatrixDisplay::restartScrollIfNeeded" name="MatrixDisplay::restartScrollIfNeeded">
-<area shape="rect" id="Node000001" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="799,85,997,125"/>
+<area shape="rect" id="Node000001" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="799,113,997,153"/>
 <area shape="rect" id="Node000002" href="$classMatrixDisplay.html#a2605cc68abad24e4163b504a91654bbc" title="Gère le redimensionnement du widget et ajuste le défilement si nécessaire." alt="" coords="540,5,736,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="841,81,750,46,703,33,705,28,752,41,843,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="857,107,807,75,750,46,710,33,712,28,752,41,810,70,860,102"/>
 <area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f" title="Bascule entre les modes texte et horloge." alt="" coords="525,120,751,145"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="786,119,751,123,751,118,785,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="785,135,751,135,751,130,785,130"/>
 <area shape="rect" id="Node000006" href="$classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66" title="Active ou désactive le défilement du texte en mode texte." alt="" coords="550,55,726,95"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="785,95,726,88,726,83,785,89"/>
-<area shape="rect" id="Node000007" href="$classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1" title="Met à jour le texte affiché sur la matrice." alt="" coords="555,169,721,195"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="835,132,751,161,706,172,705,167,750,155,833,127"/>
-<area shape="rect" id="Node000004" href="$classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="269,117,459,143"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="512,134,460,134,460,128,512,129"/>
-<area shape="rect" id="Node000005" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,143,203,168"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,143,203,148,202,143,254,138"/>
-<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="537,98,429,120,428,115,536,93"/>
-<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="536,79,400,86,325,95,251,107,189,125,136,145,134,140,187,120,250,102,324,89,400,81,536,73"/>
-<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="557,169,431,145,432,140,558,164"/>
-<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="540,180,203,163,203,158,541,175"/>
-<area shape="rect" id="Node000008" href="$classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b" title="Synchronise la matrice avec le contenu du champ de saisie." alt="" coords="251,219,477,244"/>
-<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="554,200,436,221,435,216,553,195"/>
-<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="304,217,250,202,146,171,147,165,251,197,305,212"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="792,112,726,97,727,92,794,107"/>
+<area shape="rect" id="Node000007" href="$classMatrixDisplay.html#abd144af17dba6b936e31dfb6e25ce276" title="Définit le mode de défilement." alt="" coords="258,169,470,195"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="785,155,751,159,604,173,470,181,470,175,604,167,750,154,784,150"/>
+<area shape="rect" id="Node000008" href="$classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1" title="Met à jour le texte affiché sur la matrice." alt="" coords="555,221,721,247"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="847,162,752,204,691,224,690,219,750,200,845,157"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="269,120,459,145"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="512,135,460,135,460,130,512,130"/>
+<area shape="rect" id="Node000005" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,169,203,195"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="284,151,172,172,171,167,283,145"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="537,99,426,123,425,117,536,94"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="537,76,400,83,325,93,251,110,215,123,180,139,125,172,123,167,178,135,213,118,250,105,324,88,399,78,536,70"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="245,185,203,185,203,179,245,179"/>
+<area shape="poly" id="edge12_Node000008_Node000004" title=" " alt="" coords="601,217,544,187,476,159,436,148,438,143,478,154,546,182,604,212"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="571,252,504,264,423,272,336,272,292,267,250,259,213,247,177,230,122,197,125,193,180,226,215,242,251,254,293,262,336,266,423,266,503,258,570,247"/>
+<area shape="rect" id="Node000009" href="$classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b" title="Synchronise la matrice avec le contenu du champ de saisie." alt="" coords="251,219,477,244"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="541,236,478,235,478,230,541,230"/>
+<area shape="poly" id="edge14_Node000009_Node000005" title=" " alt="" coords="283,219,171,197,172,192,284,213"/>
 </map>

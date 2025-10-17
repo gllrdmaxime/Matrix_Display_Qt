@@ -1,43 +1,50 @@
 <map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
-<area shape="rect" id="Node000001" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,257,203,283"/>
-<area shape="rect" id="Node000002" href="$classMainWindow.html#af91c8db3fce808f0870503cf1efd6668" title="Ouvre la boîte de dialogue permettant de choisir la couleur des LED." alt="" coords="262,5,481,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,256,123,214,152,155,194,93,220,65,249,41,262,34,264,38,252,46,224,69,198,97,157,158,128,216,112,258"/>
-<area shape="rect" id="Node000004" href="$classMainWindow.html#a9d6eefef967a2dd184b5232c8972ffd5" title="Ouvre la boîte de dialogue permettant de choisir la couleur du fond." alt="" coords="262,55,481,95"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,255,164,188,204,147,249,112,274,98,277,103,252,116,207,151,168,191,116,259"/>
-<area shape="rect" id="Node000006" href="$classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee" title="Indique si le texte courant dépasse la largeur affichable." alt="" coords="540,199,769,224"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="115,255,168,204,207,176,250,155,299,143,350,139,401,140,451,146,542,167,612,191,610,196,540,172,450,151,400,145,350,144,300,149,252,161,210,181,172,208,118,259"/>
-<area shape="rect" id="Node000008" href="$classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66" title="Active ou désactive le défilement du texte en mode texte." alt="" coords="567,385,743,425"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="111,282,126,326,153,388,172,420,195,451,221,478,252,500,285,516,314,525,341,530,368,530,423,519,491,499,527,486,561,469,618,431,620,435,563,474,529,491,493,505,425,524,368,535,341,535,313,531,283,521,249,504,218,482,190,454,167,423,148,390,121,328,106,284"/>
-<area shape="rect" id="Node000010" href="$classMatrixDisplay.html#a9729c4abe5da36a1915e37727f5c412e" title="Définit la vitesse de défilement en millisecondes." alt="" coords="283,221,459,261"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="202,257,269,249,270,254,203,262"/>
-<area shape="rect" id="Node000011" href="$classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1" title="Met à jour le texte affiché sur la matrice." alt="" coords="571,285,738,311"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="203,272,558,290,557,296,203,278"/>
-<area shape="rect" id="Node000012" href="$classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="276,336,467,361"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="144,280,251,314,308,330,307,335,250,319,143,285"/>
-<area shape="rect" id="Node000015" href="$classMainWindow.html#a39554c60007ae2c7d6895145144872b1" title="Affiche ou masque le layout de contrôle (saisie, boutons, etc.)." alt="" coords="267,386,475,426"/>
-<area shape="poly" id="edge20_Node000001_Node000015" title=" " alt="" coords="121,281,176,325,213,350,252,372,269,379,267,384,249,376,210,355,173,329,118,285"/>
-<area shape="rect" id="Node000016" href="$classMainWindow.html#a439c02181fc4b243de1cc1f8f0fb7522" title="Affiche le control de la vitesse si le scroll est activé" alt="" coords="251,450,492,490"/>
-<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="115,281,135,313,166,355,205,399,252,436,263,442,260,447,249,440,202,403,162,358,130,316,110,284"/>
-<area shape="rect" id="Node000017" href="$classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b" title="Synchronise la matrice avec le contenu du champ de saisie." alt="" coords="258,171,485,196"/>
-<area shape="poly" id="edge22_Node000001_Node000017" title=" " alt="" coords="130,255,185,230,250,206,286,196,287,202,251,211,187,235,133,260"/>
-<area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337" title="Modifie la couleur des pixels affichés." alt="" coords="567,5,742,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="481,15,553,15,553,21,481,21"/>
-<area shape="rect" id="Node000005" href="$classMatrixDisplay.html#ac1d75621bca4307dc554129dcd19cf56" title="Modifie la couleur des pixels affichés." alt="" coords="567,55,742,95"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="481,73,553,73,553,78,481,78"/>
-<area shape="rect" id="Node000007" href="$classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39" title="Calcule la taille d&#39;une cellule en respectant la grille fixe." alt="" coords="1064,229,1243,269"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="770,217,1051,238,1050,244,770,223"/>
-<area shape="rect" id="Node000009" href="$classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="817,327,1016,367"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="742,383,811,368,812,373,743,388"/>
-<area shape="poly" id="edge11_Node000011_Node000009" title=" " alt="" coords="723,308,804,323,803,329,722,313"/>
-<area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="397,334,614,228,616,233,400,338"/>
-<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="437,359,553,382,552,387,436,364"/>
-<area shape="poly" id="edge19_Node000012_Node000011" title=" " alt="" coords="443,333,569,311,570,316,444,339"/>
-<area shape="rect" id="Node000013" href="$classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f" title="Bascule entre les modes texte et horloge." alt="" coords="542,335,767,360"/>
-<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="467,346,528,345,528,351,467,351"/>
-<area shape="poly" id="edge17_Node000013_Node000009" title=" " alt="" coords="767,345,804,345,804,350,767,350"/>
-<area shape="rect" id="Node000014" href="$classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f" title="Gestion des mises à jour temporisées (horloge ou scroll)." alt="" coords="821,264,1012,289"/>
-<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="721,332,769,321,866,291,867,296,770,326,722,337"/>
-<area shape="poly" id="edge16_Node000014_Node000007" title=" " alt="" coords="1012,263,1050,258,1050,264,1012,268"/>
-<area shape="poly" id="edge23_Node000017_Node000006" title=" " alt="" coords="485,192,527,196,526,201,485,197"/>
-<area shape="poly" id="edge24_Node000017_Node000011" title=" " alt="" coords="450,194,493,206,518,218,541,233,619,276,617,281,539,238,515,223,491,211,449,199"/>
+<area shape="rect" id="Node000001" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,297,203,323"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#af91c8db3fce808f0870503cf1efd6668" title="Ouvre la boîte de dialogue permettant de choisir la couleur des LED." alt="" coords="255,5,473,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,296,120,248,147,178,166,141,190,104,217,70,249,41,260,34,263,39,252,45,221,74,194,107,171,143,152,181,125,249,111,298"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#a9d6eefef967a2dd184b5232c8972ffd5" title="Ouvre la boîte de dialogue permettant de choisir la couleur du fond." alt="" coords="255,55,473,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,296,127,259,157,207,198,152,222,127,249,105,258,99,261,104,252,109,226,131,202,156,161,210,131,261,113,298"/>
+<area shape="rect" id="Node000006" href="$classMatrixDisplay.html#abb985f8b2e15c1e97733721f3c2d53ee" title="Indique si le texte courant dépasse la largeur affichable." alt="" coords="531,205,761,231"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,295,170,249,208,224,250,206,292,195,335,189,423,185,505,190,574,200,573,205,504,196,423,190,336,194,293,201,252,211,211,229,174,253,120,299"/>
+<area shape="rect" id="Node000008" href="$classMatrixDisplay.html#ae27e81bf0ab12c9180a0a9a429cceb66" title="Active ou désactive le défilement du texte en mode texte." alt="" coords="558,305,734,345"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="203,310,545,319,544,325,203,315"/>
+<area shape="rect" id="Node000010" href="$classMatrixDisplay.html#a9729c4abe5da36a1915e37727f5c412e" title="Définit la vitesse de défilement en millisecondes." alt="" coords="276,525,452,565"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="114,322,133,358,163,407,203,459,252,504,273,516,270,521,249,508,200,462,159,410,128,360,109,324"/>
+<area shape="rect" id="Node000011" href="$classMatrixDisplay.html#abd144af17dba6b936e31dfb6e25ce276" title="Définit le mode de défilement." alt="" coords="258,120,470,145"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="113,295,166,232,205,194,249,162,283,147,285,152,252,167,208,199,170,235,117,299"/>
+<area shape="rect" id="Node000012" href="$classMatrixDisplay.html#a0302e6c92c412afc30490d2b8b951fd1" title="Met à jour le texte affiché sur la matrice." alt="" coords="563,255,729,280"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="203,300,549,272,549,278,203,305"/>
+<area shape="rect" id="Node000013" href="$classMainWindow.html#a90274c294b5be47445b6d5c2cbde7923" title="Affiche le checkbox de bounce si le scroll est activé" alt="" coords="545,419,747,459"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="120,321,174,366,211,390,252,409,322,428,395,439,466,444,531,444,531,450,466,449,394,444,321,433,250,414,209,395,171,370,117,325"/>
+<area shape="rect" id="Node000014" href="$classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924" title="Active ou désactive le mode horloge et gère l&#39;état du défilement." alt="" coords="269,373,459,399"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="147,320,251,351,305,367,304,372,250,357,146,325"/>
+<area shape="rect" id="Node000017" href="$classMainWindow.html#a439c02181fc4b243de1cc1f8f0fb7522" title="Affiche le control de la vitesse si le scroll est activé" alt="" coords="525,483,767,523"/>
+<area shape="poly" id="edge26_Node000001_Node000017" title=" " alt="" coords="116,321,168,385,207,420,252,449,315,474,382,490,449,499,512,504,512,509,449,505,381,495,314,479,249,454,204,424,164,388,112,325"/>
+<area shape="rect" id="Node000018" href="$classMainWindow.html#a39554c60007ae2c7d6895145144872b1" title="Affiche ou masque le layout de contrôle (saisie, boutons, etc.)." alt="" coords="260,589,468,629"/>
+<area shape="poly" id="edge25_Node000001_Node000018" title=" " alt="" coords="111,322,126,370,153,438,195,512,222,545,252,575,259,579,256,584,249,579,218,549,190,515,148,440,121,372,106,324"/>
+<area shape="rect" id="Node000019" href="$classMainWindow.html#a7c5933cf15ac0d7d2b227204de311f5b" title="Synchronise la matrice avec le contenu du champ de saisie." alt="" coords="251,221,477,247"/>
+<area shape="poly" id="edge27_Node000001_Node000019" title=" " alt="" coords="146,295,250,263,304,248,305,253,251,269,147,300"/>
+<area shape="rect" id="Node000003" href="$classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337" title="Modifie la couleur des pixels affichés." alt="" coords="559,5,733,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,15,545,15,545,21,474,21"/>
+<area shape="rect" id="Node000005" href="$classMatrixDisplay.html#ac1d75621bca4307dc554129dcd19cf56" title="Modifie la couleur des pixels affichés." alt="" coords="559,55,733,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="474,73,545,73,545,78,474,78"/>
+<area shape="rect" id="Node000007" href="$classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39" title="Calcule la taille d&#39;une cellule en respectant la grille fixe." alt="" coords="1061,293,1240,333"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="731,228,1014,278,1055,287,1054,292,1013,283,730,233"/>
+<area shape="rect" id="Node000009" href="$classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90" title="Relance le timer de défilement si les conditions sont réunies." alt="" coords="815,293,1013,333"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="734,318,801,315,801,320,734,323"/>
+<area shape="poly" id="edge11_Node000011_Node000009" title=" " alt="" coords="470,131,539,136,615,146,693,164,768,190,803,209,836,233,888,281,884,285,832,237,800,214,766,195,691,169,614,151,538,141,470,136"/>
+<area shape="poly" id="edge13_Node000012_Node000009" title=" " alt="" coords="722,277,802,291,801,296,721,283"/>
+<area shape="poly" id="edge16_Node000014_Node000006" title=" " alt="" coords="373,371,432,308,475,270,524,240,540,233,542,238,527,244,479,275,436,311,377,375"/>
+<area shape="poly" id="edge21_Node000014_Node000008" title=" " alt="" coords="423,371,544,344,545,349,424,376"/>
+<area shape="poly" id="edge22_Node000014_Node000012" title=" " alt="" coords="382,371,443,331,483,309,524,290,553,281,555,286,526,295,485,314,446,336,385,375"/>
+<area shape="poly" id="edge23_Node000014_Node000013" title=" " alt="" coords="432,396,531,415,530,420,431,401"/>
+<area shape="rect" id="Node000015" href="$classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f" title="Bascule entre les modes texte et horloge." alt="" coords="533,369,759,395"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="459,382,519,381,519,386,460,387"/>
+<area shape="poly" id="edge24_Node000014_Node000017" title=" " alt="" coords="387,397,448,432,526,469,548,477,547,482,524,474,446,437,384,401"/>
+<area shape="poly" id="edge20_Node000015_Node000009" title=" " alt="" coords="711,367,766,354,836,334,838,339,767,359,713,372"/>
+<area shape="rect" id="Node000016" href="$classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f" title="Gestion des mises à jour temporisées (horloge ou scroll)." alt="" coords="819,357,1009,383"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="759,374,805,372,805,378,759,380"/>
+<area shape="poly" id="edge19_Node000016_Node000007" title=" " alt="" coords="967,355,1054,333,1055,338,968,360"/>
+<area shape="poly" id="edge28_Node000019_Node000006" title=" " alt="" coords="477,225,518,223,518,228,477,230"/>
+<area shape="poly" id="edge29_Node000019_Node000012" title=" " alt="" coords="472,244,549,253,549,259,471,249"/>
 </map>

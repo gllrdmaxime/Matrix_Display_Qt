@@ -1,23 +1,24 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+// Inclusion de mes headers
 #include <QMainWindow>
 #include <QString>
 #include <QSlider>
 #include <QPushButton>
 #include <QComboBox>
 #include <QLabel>
+#include <QCheckBox>
+#include <QLineEdit>
+#include <QColorDialog>
 
-
+// Déclaration anticipée de la classe MatrixDisplay
 class MatrixDisplay;
-class QLineEdit;
-class QColorDialog;
-class QCheckBox;
-
 
 /**
- * @class MainWindow
  * @file mainwindow.h
+ * @author G. Maxime
+ * @class MainWindow
  * @brief Déclaration de la classe MainWindow pour l'interface principale de l'application.
  * Cette classe hérite de QMainWindow et gère l'interface utilisateur principale,
  * y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur
@@ -73,6 +74,11 @@ private slots:
      */
     void toggleSpeedControlVisibility();
 
+    /**
+     * @brief Affiche le checkbox de bounce si le scroll est activé
+     */
+    void toggleBounceCheckboxVisibility();
+
 private:
     /**
      * @brief Widget affichant la matrice LED.
@@ -98,6 +104,11 @@ private:
      * @brief Case à cocher contrôlant le défilement du texte.
      */
     QCheckBox *scrollCheckBox;
+
+    /**
+     * @brief Case à cocher contrôlant le mode de défilement (rebond).
+     */
+    QCheckBox *bounceCheckBox;
     
     /**
      * @brief Texte utilisé lorsque l'utilisateur retourne en mode texte sans saisie préalable.

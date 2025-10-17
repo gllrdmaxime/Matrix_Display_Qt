@@ -1,5 +1,6 @@
 /**
  * @file matrixfont.h
+ * @author G. Maxime
  * @brief Définit une police de caractères matricielle pour l'affichage sur une matrice LED.
  *
  * Ce fichier contient une map associant chaque caractère (A-Z, 0-9, et quelques symboles)
@@ -12,6 +13,7 @@
 #ifndef MATRIXFONT_H
 #define MATRIXFONT_H
 
+// Inclusion des headers standard nécessaires
 #include <map>
 #include <vector>
 #include <string>
@@ -259,7 +261,7 @@ inline std::map<char, std::vector<std::string>> matrix_font ={
         "01100000000110",
         "01100000000110",
         "01100011000110",
-        "011001101101100",
+        "011001111001100",
         "011011001101100",
         "011110000111100",
         "011100000011100",
@@ -267,9 +269,9 @@ inline std::map<char, std::vector<std::string>> matrix_font ={
     }},
     {'X', {
         "011000000001100",
-        "001100000011000",
         "000110000110000",
         "000011001100000",
+        "000001111000000",
         "000001111000000",
         "000011001100000",
         "000110000110000",

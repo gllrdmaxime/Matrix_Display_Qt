@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clock_0',['Clock',['../classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984',1,'MatrixDisplay']]]
+  ['bouncemode_0',['bounceMode',['../classMatrixDisplay.html#a3e5d7f6bb813612b8f60a079f42a176aad05ac42b94e98de107976c8f69d58793',1,'MatrixDisplay']]]
 ];

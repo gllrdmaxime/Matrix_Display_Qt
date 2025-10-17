@@ -1,11 +1,13 @@
 /**
  * @file main.cpp
  * @author G. Maxime
- * @date 2025-10-05
+ * @date 2025-10-17
 */
- 
+
+// Inclusion de mon headers
 #include "headers/mainwindow.h"
 
+// Inclusion du header Qt nécessaire
 #include <QApplication>
 
 /**

@@ -1,13 +1,17 @@
 /**
  * @file mainwindow.cpp
+ * @author G. Maxime
  * @brief Implémentation de la classe MainWindow pour l'interface principale de l'application.
  * Cette classe hérite de QMainWindow et gère l'interface utilisateur principale,
  * y compris l'affichage de la matrice LED, la saisie de texte, la sélection de couleur
  * et le contrôle du mode horloge.
  */
+
+// Inclusion de mes headers
 #include "headers/mainwindow.h"
 #include "headers/matrixdisplay.h"
 
+// Inclusion des headers Qt nécessaires
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QLineEdit>
@@ -57,6 +61,9 @@ MainWindow::MainWindow(QWidget *parent)
     scrollCheckBox = new QCheckBox("Scroll", this);
     controlsLayout->addWidget(scrollCheckBox);
 
+    bounceCheckBox = new QCheckBox("Bounce Scroll", this);
+    controlsLayout->addWidget(bounceCheckBox);
+
     speedLabel = new QLabel("Speed:", this);
     controlsLayout->addWidget(speedLabel);
     speedSlider = new QSlider(Qt::Horizontal, this);
@@ -70,23 +77,34 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
-
     controlsLayout->addWidget(speedSlider);
-
+    
     mainLayout->addWidget(controlsWidget);
 
+    // Ajout du raccourci clavier Ctrl+H pour afficher/masquer les contrôles
     auto *toggleShortcut = new QShortcut(QKeySequence(QStringLiteral("Ctrl+H")), this);
     toggleShortcut->setContext(Qt::ApplicationShortcut);
     connect(toggleShortcut, &QShortcut::activated, this, &MainWindow::toggleControlsVisibility);
 
+    // Connexions des signaux du controllLayout aux slots 
     connect(updateButton, &QPushButton::clicked, this, &MainWindow::updateMatrixText);
     connect(textInput, &QLineEdit::returnPressed, this, &MainWindow::updateMatrixText);
     connect(colorButton, &QPushButton::clicked, this, &MainWindow::openColorPicker);
     connect(colorButton_Background, &QPushButton::clicked, this, &MainWindow::openColorPicker_Background);
-
     connect(clockCheckBox, &QCheckBox::toggled, this, &MainWindow::toggleClock);
     connect(scrollCheckBox, &QCheckBox::toggled, matrixDisplay, &MatrixDisplay::setScrollEnabled);
     connect(scrollCheckBox, &QCheckBox::toggled, this, &MainWindow::toggleSpeedControlVisibility);
+    connect(scrollCheckBox, &QCheckBox::toggled, this, &MainWindow::toggleBounceCheckboxVisibility);
+    connect(bounceCheckBox, &QCheckBox::toggled, [this](bool checked){
+        if (matrixDisplay) {
+            if (checked) {
+                matrixDisplay->setScrollMode(MatrixDisplay::bounceMode);
+            } else {
+                matrixDisplay->setScrollMode(MatrixDisplay::defaultMode);
+            }
+        }
+    });
+
 
     setWindowTitle("Matrix Display");
     resize(900, 220);
@@ -146,15 +164,13 @@ void MainWindow::toggleClock(bool checked)
         matrixDisplay->setDisplayMode(MatrixDisplay::Clock);
         textInput->setEnabled(false);
         textInput->setVisible(false);
+
+        this->toggleSpeedControlVisibility();
+        this->toggleBounceCheckboxVisibility();
         this->updateButton->setVisible(false);
-        this->speedSlider->setVisible(false);
-        this->speedLabel->setVisible(false);
     } else {
         scrollCheckBox->setVisible(true);
         textInput->setVisible(true);
-        this->updateButton->setVisible(true);
-        this->speedLabel->setVisible(true);
-        this->speedSlider->setVisible(true);
         matrixDisplay->setDisplayMode(MatrixDisplay::Text);
         if (textInput->text().trimmed().isEmpty()) {
             textInput->setText(defaultText);
@@ -165,6 +181,10 @@ void MainWindow::toggleClock(bool checked)
             scrollCheckBox->setChecked(needsScroll);
         }
         textInput->setEnabled(true);
+
+        this->updateButton->setVisible(true);
+        this->toggleSpeedControlVisibility();
+        this->toggleBounceCheckboxVisibility();
     }
 }
 
@@ -178,4 +198,13 @@ void MainWindow::toggleSpeedControlVisibility()
 {
     if (!speedSlider) return;
     speedSlider->setVisible(scrollCheckBox->isChecked());
+    speedLabel->setVisible(scrollCheckBox->isChecked());
+}
+
+void MainWindow::toggleBounceCheckboxVisibility()
+{
+    if (scrollCheckBox->isChecked())
+        bounceCheckBox->setVisible(true);
+    else
+        bounceCheckBox->setVisible(false);
 }
