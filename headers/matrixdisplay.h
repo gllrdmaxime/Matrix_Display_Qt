@@ -54,6 +54,13 @@ public slots:
      */
     void setColor(const QColor &color);
     
+
+    /**
+     * @brief Modifie la couleur des pixels affichés.
+     * @param color Couleur utilisée pour dessiner les LED.
+     */
+    void setColor_Background(const QColor &color);
+
     /**
      * @brief Bascule entre les modes texte et horloge.
      * @param mode Mode souhaité.
@@ -115,7 +122,12 @@ private:
     /**
      * @brief Couleur des pixels allumés.
      */
-    QColor pixelColor;
+    QColor pixelColor = Qt::green;
+
+    /**
+     * @brief Couleur des pixels allumés.
+     */
+    QColor backgroundColor = Qt::darkGray;
 
     /**
      * @brief Mode d'affichage actuel (texte ou horloge).

@@ -1,0 +1,7 @@
+<map id="MatrixDisplay::setColor_Background" name="MatrixDisplay::setColor_Background">
+<area shape="rect" id="Node000001" title="Modifie la couleur des pixels affichés." alt="" coords="517,5,692,45"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a9d6eefef967a2dd184b5232c8972ffd5" title="Ouvre la boîte de dialogue permettant de choisir la couleur du fond." alt="" coords="251,5,469,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,28,469,28,469,23,504,23"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title="Macro Qt pour la gestion des signaux et slots." alt="" coords="5,13,203,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,28,203,28,203,23,237,23"/>
+</map>

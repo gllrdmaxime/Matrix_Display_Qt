@@ -45,8 +45,11 @@ MainWindow::MainWindow(QWidget *parent)
     updateButton = new QPushButton("Update Text", this);
     controlsLayout->addWidget(updateButton);
 
-    QPushButton *colorButton = new QPushButton("Change Color", this);
+    QPushButton *colorButton = new QPushButton("Change Pixel Color", this);
     controlsLayout->addWidget(colorButton);
+
+    QPushButton *colorButton_Background = new QPushButton("Change Background Color", this);
+    controlsLayout->addWidget(colorButton_Background);
 
     clockCheckBox = new QCheckBox("Show Clock", this);
     controlsLayout->addWidget(clockCheckBox);
@@ -54,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     scrollCheckBox = new QCheckBox("Scroll", this);
     controlsLayout->addWidget(scrollCheckBox);
 
-    QLabel *speedLabel = new QLabel("Speed:", this);
+    speedLabel = new QLabel("Speed:", this);
     controlsLayout->addWidget(speedLabel);
     speedSlider = new QSlider(Qt::Horizontal, this);
     speedSlider->setRange(1, 5);
@@ -79,6 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(updateButton, &QPushButton::clicked, this, &MainWindow::updateMatrixText);
     connect(textInput, &QLineEdit::returnPressed, this, &MainWindow::updateMatrixText);
     connect(colorButton, &QPushButton::clicked, this, &MainWindow::openColorPicker);
+    connect(colorButton_Background, &QPushButton::clicked, this, &MainWindow::openColorPicker_Background);
 
     connect(clockCheckBox, &QCheckBox::toggled, this, &MainWindow::toggleClock);
     connect(scrollCheckBox, &QCheckBox::toggled, matrixDisplay, &MatrixDisplay::setScrollEnabled);
@@ -118,6 +122,17 @@ void MainWindow::openColorPicker()
 }
 
 /**
+ * @brief Ouvre une boîte de dialogue pour sélectionner la couleur du fond
+ */
+void MainWindow::openColorPicker_Background()
+{
+    QColor color = QColorDialog::getColor(Qt::darkGray, this, "Choose Background Color");
+    if (color.isValid()) {
+        matrixDisplay->setColor_Background(color);
+    }
+}
+
+/**
  * @brief Active ou désactive le mode horloge sur la matrice LED.
  *        Force la désactivation du défilement en mode horloge et restaure
  *        un texte par défaut lors du retour en mode texte si aucun contenu n'a été saisi.
@@ -132,11 +147,14 @@ void MainWindow::toggleClock(bool checked)
         textInput->setEnabled(false);
         textInput->setVisible(false);
         this->updateButton->setVisible(false);
-    
+        this->speedSlider->setVisible(false);
+        this->speedLabel->setVisible(false);
     } else {
         scrollCheckBox->setVisible(true);
         textInput->setVisible(true);
         this->updateButton->setVisible(true);
+        this->speedLabel->setVisible(true);
+        this->speedSlider->setVisible(true);
         matrixDisplay->setDisplayMode(MatrixDisplay::Text);
         if (textInput->text().trimmed().isEmpty()) {
             textInput->setText(defaultText);

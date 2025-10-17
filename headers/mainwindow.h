@@ -6,6 +6,8 @@
 #include <QSlider>
 #include <QPushButton>
 #include <QComboBox>
+#include <QLabel>
+
 
 class MatrixDisplay;
 class QLineEdit;
@@ -50,6 +52,11 @@ private slots:
      * @brief Ouvre la boîte de dialogue permettant de choisir la couleur des LED.
      */
     void openColorPicker();
+
+    /**
+     * @brief Ouvre la boîte de dialogue permettant de choisir la couleur du fond.
+     */
+    void openColorPicker_Background();
     
     /**
      * @brief Active ou désactive le mode horloge et gère l'état du défilement.
@@ -101,6 +108,11 @@ private:
      * @brief Ajout d'un widget de controls pour contenir mon layout et pouvoir le faire disparaitres avec un raccourci clavier.
      */
     QWidget *controlsWidget = nullptr;
+
+    /**
+     * @brief Label pour indiquer le titre du slider de vitesse.
+     */
+    QLabel *speedLabel = nullptr;
 
     /**
      * @brief Slider pour ajuster la vitesse de défilement.

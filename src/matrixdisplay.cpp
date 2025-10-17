@@ -77,6 +77,12 @@ void MatrixDisplay::setColor(const QColor &color)
     update();
 }
 
+void MatrixDisplay::setColor_Background(const QColor &color)
+{
+    backgroundColor = color;
+    update();
+}
+
 void MatrixDisplay::setDisplayMode(DisplayMode mode)
 {
     if (currentMode == mode)
@@ -244,7 +250,7 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
     Q_UNUSED(event);
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing, true);
-    painter.fillRect(rect(), Qt::darkGray);
+    painter.fillRect(rect(), backgroundColor);
 
     if (currentText.isEmpty()) {
         return;

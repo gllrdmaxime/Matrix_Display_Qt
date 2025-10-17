@@ -3,6 +3,7 @@ var classMainWindow =
     [ "MainWindow", "classMainWindow.html#a996c5a2b6f77944776856f08ec30858d", null ],
     [ "~MainWindow", "classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7", null ],
     [ "openColorPicker", "classMainWindow.html#af91c8db3fce808f0870503cf1efd6668", null ],
+    [ "openColorPicker_Background", "classMainWindow.html#a9d6eefef967a2dd184b5232c8972ffd5", null ],
     [ "toggleClock", "classMainWindow.html#a2ac7dc94189b9755b772cf889c82d924", null ],
     [ "toggleControlsVisibility", "classMainWindow.html#a39554c60007ae2c7d6895145144872b1", null ],
     [ "toggleSpeedControlVisibility", "classMainWindow.html#a439c02181fc4b243de1cc1f8f0fb7522", null ],
@@ -13,6 +14,7 @@ var classMainWindow =
     [ "defaultText", "classMainWindow.html#ad2d58a74173162c294ea00bbd62122c4", null ],
     [ "matrixDisplay", "classMainWindow.html#a304ff148ce05c05784afb24b76ed3563", null ],
     [ "scrollCheckBox", "classMainWindow.html#ad3ecb130f729bcf339211e9644ba52d4", null ],
+    [ "speedLabel", "classMainWindow.html#a6bd89091fc81e0b39d8640d23832ae5d", null ],
     [ "speedSlider", "classMainWindow.html#abed2eda4dfad56d1b401b1d893f1b7d4", null ],
     [ "textInput", "classMainWindow.html#a6b51b7c9f36c29a1056fdeec5f563d92", null ],
     [ "updateButton", "classMainWindow.html#ac91c721b31de2479fb1d369786411abe", null ]
