@@ -64,5 +64,7 @@ Doxygen documentation are available in the doc_doxygen folder.
 You can generate the documentation with the Project Configuration using this command:
 
 ```sh
+#if you are in build/ folder
+cd .. 
 doxygen Doxyfile
 ```
