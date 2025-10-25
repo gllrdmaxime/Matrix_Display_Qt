@@ -221,10 +221,9 @@ void MatrixDisplay::onTimeout()
 
     } else if (currentMode == Text && scrollEnabled) {
         const float cellSize = calculateCellSize();
-        const float charWidthInCols = CHAR_COLS;
         int numChars = currentText.length();
 
-        float totalTextWidthInCols = numChars * charWidthInCols
+        float totalTextWidthInCols = numChars * CHAR_COLS;
             + (numChars > 1 ? (numChars - 1) : 0);
         
         float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
@@ -269,9 +268,8 @@ bool MatrixDisplay::requiresScrolling() const
     if (currentText.isEmpty())
         return false;
     const float cellSize = calculateCellSize();
-    const float charWidthInCols = CHAR_COLS;
     const int numChars = currentText.length();
-    const float totalTextWidthInCols = numChars * charWidthInCols
+    const float totalTextWidthInCols = numChars * CHAR_COLS;
         + (numChars > 1 ? (numChars - 1) : 0.0f);
     const float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
     const float matrixWidth = MatrixCols * cellSize;
@@ -291,14 +289,13 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
     const float cellSize = calculateCellSize();
     const float pixelDiameter = cellSize * 0.8f;
     const float pixelOffset = (cellSize - pixelDiameter) / 2.0f;
-    const float charWidthInCols = CHAR_COLS;
     float matrixWidth = MatrixCols * cellSize;
     float matrixHeight = MatrixRows * cellSize;
     float xBase = (width() - matrixWidth) / 2.0f;
     float yOffset = (height() - matrixHeight) / 2.0f;
     painter.setClipRect(QRectF(xBase, yOffset, matrixWidth, matrixHeight));
     int numChars = currentText.length();
-    float totalTextWidthInCols = numChars * charWidthInCols
+    float totalTextWidthInCols = numChars * CHAR_COLS;
         + (numChars > 1 ? (numChars - 1) : 0);
     float totalTextWidthInPixels = totalTextWidthInCols * cellSize;
     bool isScrolling = (currentMode == Text) && scrollEnabled;
@@ -337,7 +334,7 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
             continue;
         }
         const auto &charMap = matrix_font.at(c);
-        float charStartX = i * (charWidthInCols) * cellSize;
+        float charStartX = i * (CHAR_COLS) * cellSize;
         
         for (int row = 0 ; row < CHAR_ROWS ; ++row) {
             for (int col = 0; col < CHAR_COLS; ++col) {
