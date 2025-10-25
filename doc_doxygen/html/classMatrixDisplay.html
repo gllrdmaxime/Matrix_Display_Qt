@@ -330,44 +330,37 @@ Attributs privés</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructeur de la matrice LED. </p>
-<p>Constructeur de la classe <a class="el" href="classMatrixDisplay.html" title="Déclaration de la classe MatrixDisplay pour l&#39;affichage sur une matrice LED.">MatrixDisplay</a>.</p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">parent</td><td>Pointeur vers le widget parent (par défaut nullptr) </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00040">40</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>    : QWidget(parent),</div>
-<div class="line"><span class="lineno">   42</span>      <a class="code hl_variable" href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">pixelColor</a>(0, 255, 0),</div>
-<div class="line"><span class="lineno">   43</span>      <a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a>(<a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>),</div>
-<div class="line"><span class="lineno">   44</span>      <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a>(0),</div>
-<div class="line"><span class="lineno">   45</span>      <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">   46</span>{</div>
-<div class="line"><span class="lineno">   47</span>    setAttribute(Qt::WA_OpaquePaintEvent, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   48</span>    setAutoFillBackground(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   49</span>    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> defaultWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>);</div>
-<div class="line"><span class="lineno">   52</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> defaultHeight = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>);</div>
-<div class="line"><span class="lineno">   53</span>    setMinimumSize(defaultWidth / 2, defaultHeight / 2);</div>
-<div class="line"><span class="lineno">   54</span>    setBaseSize(defaultWidth, defaultHeight);</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   57</span>    connect(<a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">MatrixDisplay::onTimeout</a>);</div>
-<div class="line"><span class="lineno">   58</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00036">36</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    : QWidget(parent),</div>
+<div class="line"><span class="lineno">   38</span>      <a class="code hl_variable" href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">pixelColor</a>(0, 255, 0),</div>
+<div class="line"><span class="lineno">   39</span>      <a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a>(<a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>),</div>
+<div class="line"><span class="lineno">   40</span>      <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a>(0),</div>
+<div class="line"><span class="lineno">   41</span>      <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   42</span>{</div>
+<div class="line"><span class="lineno">   43</span>    setAttribute(Qt::WA_OpaquePaintEvent, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   44</span>    setAutoFillBackground(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   45</span>    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> defaultWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>);</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> defaultHeight = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>);</div>
+<div class="line"><span class="lineno">   49</span>    setMinimumSize(defaultWidth / 2, defaultHeight / 2);</div>
+<div class="line"><span class="lineno">   50</span>    setBaseSize(defaultWidth, defaultHeight);</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   53</span>    connect(<a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">MatrixDisplay::onTimeout</a>);</div>
+<div class="line"><span class="lineno">   54</span>}</div>
 <div class="ttc" id="aclassMatrixDisplay_html_a04d45e698522002abb8b8fb3c96714ee"><div class="ttname"><a href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">MatrixDisplay::scrollOffset</a></div><div class="ttdeci">int scrollOffset</div><div class="ttdoc">Décalage horizontal courant utilisé pendant le défilement.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00161">matrixdisplay.h:161</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html_a37a588efdef6edb51068667e1f8ed231"><div class="ttname"><a href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">MatrixDisplay::pixelColor</a></div><div class="ttdeci">QColor pixelColor</div><div class="ttdoc">Couleur des pixels allumés.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00141">matrixdisplay.h:141</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html_a58808cd7695d5fcd21024e5eb32e7974"><div class="ttname"><a href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">MatrixDisplay::currentMode</a></div><div class="ttdeci">DisplayMode currentMode</div><div class="ttdoc">Mode d'affichage actuel (texte ou horloge).</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00151">matrixdisplay.h:151</a></div></div>
-<div class="ttc" id="aclassMatrixDisplay_html_a6ce597bea1bc075b16947c28c4f0225f"><div class="ttname"><a href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">MatrixDisplay::onTimeout</a></div><div class="ttdeci">void onTimeout()</div><div class="ttdoc">Gestion des mises à jour temporisées (horloge ou scroll).</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00212">matrixdisplay.cpp:212</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a6ce597bea1bc075b16947c28c4f0225f"><div class="ttname"><a href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">MatrixDisplay::onTimeout</a></div><div class="ttdeci">void onTimeout()</div><div class="ttdoc">Gestion des mises à jour temporisées (horloge ou scroll).</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00208">matrixdisplay.cpp:208</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html_aaabc0c3c35828f23fe4b3b9dd45d57c0"><div class="ttname"><a href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">MatrixDisplay::scrollEnabled</a></div><div class="ttdeci">bool scrollEnabled</div><div class="ttdoc">Indique si le défilement est autorisé en mode texte.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00166">matrixdisplay.h:166</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html_ade2f2415ecfedf89bded47ba96efdef2"><div class="ttname"><a href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">MatrixDisplay::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdoc">timeur pour gérer les mises à jour périodiques (scroll ou horloge).</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00156">matrixdisplay.h:156</a></div></div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_acde102e3104550e362a990bf98be4ee3"><div class="ttname"><a href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a></div><div class="ttdeci">static constexpr float kDefaultCellSize</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00033">matrixdisplay.cpp:33</a></div></div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_ad6c430513225d7cc1726429cb72b00ad"><div class="ttname"><a href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a></div><div class="ttdeci">static constexpr int MatrixRows</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00032">matrixdisplay.cpp:32</a></div></div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_af7e9fe067be400e31a0851d015d8a5c8"><div class="ttname"><a href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a></div><div class="ttdeci">static constexpr int MatrixCols</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00031">matrixdisplay.cpp:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00033">kDefaultCellSize</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00032">MatrixRows</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00212">onTimeout()</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00033">kDefaultCellSize</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00032">MatrixRows</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00208">onTimeout()</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -410,36 +403,36 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Calcule la taille d'une cellule en respectant la grille fixe. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Taille d'une cellule en pixels. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00155">155</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> &lt;= 0)</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>;</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>    <span class="keywordtype">int</span> w = width();</div>
-<div class="line"><span class="lineno">  161</span>    <span class="keywordtype">int</span> h = height();</div>
-<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span> (w &lt;= 0 || h &lt;= 0)</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>    <span class="keywordtype">float</span> usableHeight = h * <a class="code hl_variable" href="matrixdisplay_8cpp.html#a73280bb151fd1e9479168c7fff1ff798">kMaxHeightUsage</a>;</div>
-<div class="line"><span class="lineno">  166</span>    <span class="keywordtype">float</span> sizeByHeight = usableHeight / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a>);</div>
-<div class="line"><span class="lineno">  167</span>    <span class="keywordtype">float</span> sizeByWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(w) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a>);</div>
-<div class="line"><span class="lineno">  168</span>    <span class="keywordtype">float</span> chosen = std::min(sizeByHeight, sizeByWidth);</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">if</span> (chosen &lt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>)</div>
-<div class="line"><span class="lineno">  171</span>        chosen = <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>;</div>
-<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a> &gt; 0.0f &amp;&amp; chosen &gt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a>)</div>
-<div class="line"><span class="lineno">  173</span>        chosen = <a class="code hl_variable" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a>;</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>    <span class="keywordtype">float</span> dpr = devicePixelRatioF();</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">if</span> (dpr &gt; 0.0f) {</div>
-<div class="line"><span class="lineno">  178</span>        chosen = std::ceil(chosen * dpr) / dpr;</div>
-<div class="line"><span class="lineno">  179</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  180</span>        chosen = std::ceil(chosen);</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-<div class="line"><span class="lineno">  182</span> </div>
-<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> chosen;</div>
-<div class="line"><span class="lineno">  184</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00151">151</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>{</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> &lt;= 0)</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>;</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordtype">int</span> w = width();</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordtype">int</span> h = height();</div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> (w &lt;= 0 || h &lt;= 0)</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>;</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordtype">float</span> usableHeight = h * <a class="code hl_variable" href="matrixdisplay_8cpp.html#a73280bb151fd1e9479168c7fff1ff798">kMaxHeightUsage</a>;</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordtype">float</span> sizeByHeight = usableHeight / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a>);</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordtype">float</span> sizeByWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(w) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a>);</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordtype">float</span> chosen = std::min(sizeByHeight, sizeByWidth);</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">if</span> (chosen &lt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>)</div>
+<div class="line"><span class="lineno">  167</span>        chosen = <a class="code hl_variable" href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a>;</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a> &gt; 0.0f &amp;&amp; chosen &gt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a>)</div>
+<div class="line"><span class="lineno">  169</span>        chosen = <a class="code hl_variable" href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a>;</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordtype">float</span> dpr = devicePixelRatioF();</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">if</span> (dpr &gt; 0.0f) {</div>
+<div class="line"><span class="lineno">  174</span>        chosen = std::ceil(chosen * dpr) / dpr;</div>
+<div class="line"><span class="lineno">  175</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  176</span>        chosen = std::ceil(chosen);</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">return</span> chosen;</div>
+<div class="line"><span class="lineno">  180</span>}</div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_a025a0e71eaf8a7c8e2ffced4651298c2"><div class="ttname"><a href="matrixdisplay_8cpp.html#a025a0e71eaf8a7c8e2ffced4651298c2">kMinCellSize</a></div><div class="ttdeci">static constexpr float kMinCellSize</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00029">matrixdisplay.cpp:29</a></div></div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_a214a8c89d183de55e752cd23abae548d"><div class="ttname"><a href="matrixdisplay_8cpp.html#a214a8c89d183de55e752cd23abae548d">kMaxCellSize</a></div><div class="ttdeci">static constexpr float kMaxCellSize</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00030">matrixdisplay.cpp:30</a></div></div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_a73280bb151fd1e9479168c7fff1ff798"><div class="ttname"><a href="matrixdisplay_8cpp.html#a73280bb151fd1e9479168c7fff1ff798">kMaxHeightUsage</a></div><div class="ttdeci">static constexpr float kMaxHeightUsage</div><div class="ttdoc">Constantes de configuration pour la matrice LED.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00028">matrixdisplay.cpp:28</a></div></div>
@@ -502,71 +495,71 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Gestion des mises à jour temporisées (horloge ou scroll). </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00212">212</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>{</div>
-<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984">Clock</a>) {</div>
-<div class="line"><span class="lineno">  215</span>        QString timeText = QTime::currentTime().toString(<span class="stringliteral">&quot;HH:mm&quot;</span>);</div>
-<div class="line"><span class="lineno">  216</span>        </div>
-<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (QTime::currentTime().second() % 2 == 0) {</div>
-<div class="line"><span class="lineno">  218</span>            timeText[2] = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  219</span>        }</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a> != timeText) {</div>
-<div class="line"><span class="lineno">  222</span>            <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a> = timeText;</div>
-<div class="line"><span class="lineno">  223</span>            update();</div>
-<div class="line"><span class="lineno">  224</span>        }</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a> &amp;&amp; <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>) {</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> cellSize = <a class="code hl_function" href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">calculateCellSize</a>();</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> charWidthInCols = <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>;</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordtype">int</span> numChars = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.length();</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">float</span> totalTextWidthInCols = numChars * charWidthInCols</div>
-<div class="line"><span class="lineno">  232</span>            + (numChars &gt; 1 ? (numChars - 1) : 0);</div>
-<div class="line"><span class="lineno">  233</span>        </div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">float</span> totalTextWidthInPixels = totalTextWidthInCols * cellSize;</div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordtype">float</span> matrixWidth = <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * cellSize;</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a3e5d7f6bb813612b8f60a079f42a176aad05ac42b94e98de107976c8f69d58793">bounceMode</a>) {</div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordtype">float</span> bounceRange = (totalTextWidthInPixels &gt;= matrixWidth)</div>
-<div class="line"><span class="lineno">  239</span>                                    ? (totalTextWidthInPixels - matrixWidth)</div>
-<div class="line"><span class="lineno">  240</span>                                    : (matrixWidth - totalTextWidthInPixels);</div>
-<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (bounceRange &lt;= 0.0f) {</div>
-<div class="line"><span class="lineno">  242</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">  243</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = 1;</div>
-<div class="line"><span class="lineno">  244</span>                update();</div>
-<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  246</span>            }</div>
-<div class="line"><span class="lineno">  247</span> </div>
-<div class="line"><span class="lineno">  248</span>            <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> += <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> * cellSize;</div>
-<div class="line"><span class="lineno">  249</span> </div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> &gt;= bounceRange) {</div>
-<div class="line"><span class="lineno">  251</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = bounceRange;</div>
-<div class="line"><span class="lineno">  252</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = -1;</div>
-<div class="line"><span class="lineno">  253</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> &lt;= 0.0f) {</div>
-<div class="line"><span class="lineno">  254</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">  255</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = 1;</div>
-<div class="line"><span class="lineno">  256</span>            }</div>
-<div class="line"><span class="lineno">  257</span>            update();</div>
-<div class="line"><span class="lineno">  258</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordtype">int</span> wrapWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(totalTextWidthInPixels + matrixWidth);</div>
-<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">if</span> (wrapWidth &gt; 0) {</div>
-<div class="line"><span class="lineno">  261</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> += cellSize;</div>
-<div class="line"><span class="lineno">  262</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> &gt;= wrapWidth) {</div>
-<div class="line"><span class="lineno">  263</span>                    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = std::fmod(<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a>, wrapWidth);</div>
-<div class="line"><span class="lineno">  264</span>                }</div>
-<div class="line"><span class="lineno">  265</span>            }</div>
-<div class="line"><span class="lineno">  266</span>            update();</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="line"><span class="lineno">  268</span>    }</div>
-<div class="line"><span class="lineno">  269</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00208">208</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  209</span>{</div>
+<div class="line"><span class="lineno">  210</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984">Clock</a>) {</div>
+<div class="line"><span class="lineno">  211</span>        QString timeText = QTime::currentTime().toString(<span class="stringliteral">&quot;HH:mm&quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>        </div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (QTime::currentTime().second() % 2 == 0) {</div>
+<div class="line"><span class="lineno">  214</span>            timeText[2] = <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a> != timeText) {</div>
+<div class="line"><span class="lineno">  218</span>            <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a> = timeText;</div>
+<div class="line"><span class="lineno">  219</span>            update();</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a> &amp;&amp; <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>) {</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> cellSize = <a class="code hl_function" href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">calculateCellSize</a>();</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> charWidthInCols = <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>;</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordtype">int</span> numChars = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.length();</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordtype">float</span> totalTextWidthInCols = numChars * charWidthInCols</div>
+<div class="line"><span class="lineno">  228</span>            + (numChars &gt; 1 ? (numChars - 1) : 0);</div>
+<div class="line"><span class="lineno">  229</span>        </div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordtype">float</span> totalTextWidthInPixels = totalTextWidthInCols * cellSize;</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">float</span> matrixWidth = <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * cellSize;</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a3e5d7f6bb813612b8f60a079f42a176aad05ac42b94e98de107976c8f69d58793">bounceMode</a>) {</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordtype">float</span> bounceRange = (totalTextWidthInPixels &gt;= matrixWidth)</div>
+<div class="line"><span class="lineno">  235</span>                                    ? (totalTextWidthInPixels - matrixWidth)</div>
+<div class="line"><span class="lineno">  236</span>                                    : (matrixWidth - totalTextWidthInPixels);</div>
+<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">if</span> (bounceRange &lt;= 0.0f) {</div>
+<div class="line"><span class="lineno">  238</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  239</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = 1;</div>
+<div class="line"><span class="lineno">  240</span>                update();</div>
+<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  242</span>            }</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>            <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> += <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> * cellSize;</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> &gt;= bounceRange) {</div>
+<div class="line"><span class="lineno">  247</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = bounceRange;</div>
+<div class="line"><span class="lineno">  248</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = -1;</div>
+<div class="line"><span class="lineno">  249</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> &lt;= 0.0f) {</div>
+<div class="line"><span class="lineno">  250</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  251</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = 1;</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>            update();</div>
+<div class="line"><span class="lineno">  254</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordtype">int</span> wrapWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(totalTextWidthInPixels + matrixWidth);</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">if</span> (wrapWidth &gt; 0) {</div>
+<div class="line"><span class="lineno">  257</span>                <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> += cellSize;</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> &gt;= wrapWidth) {</div>
+<div class="line"><span class="lineno">  259</span>                    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = std::fmod(<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a>, wrapWidth);</div>
+<div class="line"><span class="lineno">  260</span>                }</div>
+<div class="line"><span class="lineno">  261</span>            }</div>
+<div class="line"><span class="lineno">  262</span>            update();</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="line"><span class="lineno">  265</span>}</div>
 <div class="ttc" id="aclassMatrixDisplay_html_a416e92ee2a73481c05ed06171a614770"><div class="ttname"><a href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">MatrixDisplay::scrollDirection</a></div><div class="ttdeci">int scrollDirection</div><div class="ttdoc">Direction actuelle du défilement (1 gauche à droite, -1 pour droite à gauche).</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00181">matrixdisplay.h:181</a></div></div>
-<div class="ttc" id="aclassMatrixDisplay_html_a5f8efa13c6fbf48f0dc760f004a99d39"><div class="ttname"><a href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">MatrixDisplay::calculateCellSize</a></div><div class="ttdeci">float calculateCellSize() const</div><div class="ttdoc">Calcule la taille d'une cellule en respectant la grille fixe.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00155">matrixdisplay.cpp:155</a></div></div>
+<div class="ttc" id="aclassMatrixDisplay_html_a5f8efa13c6fbf48f0dc760f004a99d39"><div class="ttname"><a href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">MatrixDisplay::calculateCellSize</a></div><div class="ttdeci">float calculateCellSize() const</div><div class="ttdoc">Calcule la taille d'une cellule en respectant la grille fixe.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00151">matrixdisplay.cpp:151</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html_a894177829462ee7dae376c99be5f59f1"><div class="ttname"><a href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">MatrixDisplay::currentText</a></div><div class="ttdeci">QString currentText</div><div class="ttdoc">Texte affiché sur la matrice (toujours en majuscules).</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00136">matrixdisplay.h:136</a></div></div>
 <div class="ttc" id="aclassMatrixDisplay_html_ad22df8d6884c151eb02bee42b4500839"><div class="ttname"><a href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">MatrixDisplay::scrollMode</a></div><div class="ttdeci">ScrollMode scrollMode</div><div class="ttdoc">Mode de défilement actuel.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00176">matrixdisplay.h:176</a></div></div>
 <div class="ttc" id="amatrixfont_8h_html_ae89428e9c78f67aa464131251dce53f8"><div class="ttname"><a href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a></div><div class="ttdeci">const int CHAR_COLS</div><div class="ttdoc">Nombre de colonnes par caractère dans la matrice.</div><div class="ttdef"><b>Definition</b> <a href="matrixfont_8h_source.html#l00025">matrixfont.h:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00041">bounceMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00155">calculateCellSize()</a>, <a class="el" href="matrixfont_8h_source.html#l00025">CHAR_COLS</a>, <a class="el" href="matrixdisplay_8h_source.html#l00033">Clock</a>, <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, <a class="el" href="matrixdisplay_8h_source.html#l00181">scrollDirection</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00176">scrollMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00041">bounceMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00151">calculateCellSize()</a>, <a class="el" href="matrixfont_8h_source.html#l00025">CHAR_COLS</a>, <a class="el" href="matrixdisplay_8h_source.html#l00033">Clock</a>, <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, <a class="el" href="matrixdisplay_8h_source.html#l00181">scrollDirection</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00176">scrollMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -624,85 +617,85 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Dessine la matrice LED et le contenu (texte ou horloge). </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00286">286</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  287</span>{</div>
-<div class="line"><span class="lineno">  288</span>    Q_UNUSED(event);</div>
-<div class="line"><span class="lineno">  289</span>    QPainter painter(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  290</span>    painter.setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  291</span>    painter.fillRect(rect(), <a class="code hl_variable" href="classMatrixDisplay.html#ac73d701466320dca1dab64725a348908">backgroundColor</a>);</div>
-<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.isEmpty()) {</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  294</span>    }</div>
-<div class="line"><span class="lineno">  295</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> cellSize = <a class="code hl_function" href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">calculateCellSize</a>();</div>
-<div class="line"><span class="lineno">  296</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> pixelDiameter = cellSize * 0.8f;</div>
-<div class="line"><span class="lineno">  297</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> pixelOffset = (cellSize - pixelDiameter) / 2.0f;</div>
-<div class="line"><span class="lineno">  298</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> charWidthInCols = <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>;</div>
-<div class="line"><span class="lineno">  299</span>    <span class="keywordtype">float</span> matrixWidth = <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * cellSize;</div>
-<div class="line"><span class="lineno">  300</span>    <span class="keywordtype">float</span> matrixHeight = <a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> * cellSize;</div>
-<div class="line"><span class="lineno">  301</span>    <span class="keywordtype">float</span> xBase = (width() - matrixWidth) / 2.0f;</div>
-<div class="line"><span class="lineno">  302</span>    <span class="keywordtype">float</span> yOffset = (height() - matrixHeight) / 2.0f;</div>
-<div class="line"><span class="lineno">  303</span>    painter.setClipRect(QRectF(xBase, yOffset, matrixWidth, matrixHeight));</div>
-<div class="line"><span class="lineno">  304</span>    <span class="keywordtype">int</span> numChars = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.length();</div>
-<div class="line"><span class="lineno">  305</span>    <span class="keywordtype">float</span> totalTextWidthInCols = numChars * charWidthInCols</div>
-<div class="line"><span class="lineno">  306</span>        + (numChars &gt; 1 ? (numChars - 1) : 0);</div>
-<div class="line"><span class="lineno">  307</span>    <span class="keywordtype">float</span> totalTextWidthInPixels = totalTextWidthInCols * cellSize;</div>
-<div class="line"><span class="lineno">  308</span>    <span class="keywordtype">bool</span> isScrolling = (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>) &amp;&amp; <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>;</div>
-<div class="line"><span class="lineno">  309</span>    <span class="keywordtype">float</span> xOffset = xBase + (matrixWidth - totalTextWidthInPixels) / 2.0f;</div>
-<div class="line"><span class="lineno">  310</span>    <span class="keywordflow">if</span> (isScrolling) {</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a3e5d7f6bb813612b8f60a079f42a176aad05ac42b94e98de107976c8f69d58793">bounceMode</a>) {</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">if</span> (totalTextWidthInPixels &gt;= matrixWidth) {</div>
-<div class="line"><span class="lineno">  313</span>                <span class="comment">// Ajout de 2 pixel de marge pour éviter de changer de sens au moment ou la première lettre arrive tout à gauche de la matrice d&#39;affichage</span></div>
-<div class="line"><span class="lineno">  314</span>                xOffset = xBase - <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> + 2.0f * cellSize;</div>
-<div class="line"><span class="lineno">  315</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  316</span>                <span class="keywordtype">float</span> bounceRange = matrixWidth - totalTextWidthInPixels;</div>
-<div class="line"><span class="lineno">  317</span>                <span class="keywordtype">float</span> centeredBase = xBase + bounceRange / 2.0f;</div>
-<div class="line"><span class="lineno">  318</span>                xOffset = centeredBase + (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> - bounceRange / 2.0f);</div>
-<div class="line"><span class="lineno">  319</span>            }</div>
-<div class="line"><span class="lineno">  320</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  321</span>            xOffset = xBase + matrixWidth - <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a>;</div>
-<div class="line"><span class="lineno">  322</span>        }</div>
-<div class="line"><span class="lineno">  323</span>    }</div>
-<div class="line"><span class="lineno">  324</span>   </div>
-<div class="line"><span class="lineno">  325</span>    </div>
-<div class="line"><span class="lineno">  326</span>    </div>
-<div class="line"><span class="lineno">  327</span>    painter.setPen(Qt::NoPen);</div>
-<div class="line"><span class="lineno">  328</span> </div>
-<div class="line"><span class="lineno">  329</span>    painter.setBrush(Qt::black);</div>
-<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a>; ++row) {</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a>; ++col) {</div>
-<div class="line"><span class="lineno">  332</span>            <span class="keywordtype">float</span> x = xBase + col * cellSize + pixelOffset;</div>
-<div class="line"><span class="lineno">  333</span>            <span class="keywordtype">float</span> y = yOffset + row * cellSize + pixelOffset;</div>
-<div class="line"><span class="lineno">  334</span>            painter.drawEllipse(QRectF(x, y, pixelDiameter, pixelDiameter));</div>
-<div class="line"><span class="lineno">  335</span>        }</div>
-<div class="line"><span class="lineno">  336</span>    }</div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numChars; ++i) {</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordtype">char</span> c = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>[i].toLatin1();</div>
-<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="matrixfont_8h.html#aeca3c4dff732f4c6e87c11d5fa8d4604">matrix_font</a>.count(c)) {</div>
-<div class="line"><span class="lineno">  341</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;charMap = <a class="code hl_variable" href="matrixfont_8h.html#aeca3c4dff732f4c6e87c11d5fa8d4604">matrix_font</a>.at(c);</div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordtype">float</span> charStartX = i * (charWidthInCols) * cellSize;</div>
-<div class="line"><span class="lineno">  345</span>        </div>
-<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0 ; row &lt; <a class="code hl_variable" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a> ; ++row) {</div>
-<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>; ++col) {</div>
-<div class="line"><span class="lineno">  348</span>                <span class="keywordflow">if</span> (col &lt; charMap[row].length() &amp;&amp; charMap[row][col] == <span class="charliteral">&#39;1&#39;</span>) {</div>
-<div class="line"><span class="lineno">  349</span>                    <span class="keywordtype">float</span> x = xOffset + charStartX + col * cellSize + pixelOffset;</div>
-<div class="line"><span class="lineno">  350</span>                    <span class="keywordtype">float</span> y = yOffset + (row + (<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> - <a class="code hl_variable" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a>) / 2.0f) * cellSize + pixelOffset;</div>
-<div class="line"><span class="lineno">  351</span>                    painter.setBrush(<a class="code hl_variable" href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">pixelColor</a>);</div>
-<div class="line"><span class="lineno">  352</span>                    <span class="keywordflow">if</span> (x + pixelDiameter &lt; xBase || x &gt; xBase + matrixWidth)</div>
-<div class="line"><span class="lineno">  353</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  354</span>                    painter.drawEllipse(QRectF(x, y, pixelDiameter, pixelDiameter));</div>
-<div class="line"><span class="lineno">  355</span>                }</div>
-<div class="line"><span class="lineno">  356</span>            }</div>
-<div class="line"><span class="lineno">  357</span>        }</div>
-<div class="line"><span class="lineno">  358</span>    }</div>
-<div class="line"><span class="lineno">  359</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00282">282</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  283</span>{</div>
+<div class="line"><span class="lineno">  284</span>    Q_UNUSED(event);</div>
+<div class="line"><span class="lineno">  285</span>    QPainter painter(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  286</span>    painter.setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  287</span>    painter.fillRect(rect(), <a class="code hl_variable" href="classMatrixDisplay.html#ac73d701466320dca1dab64725a348908">backgroundColor</a>);</div>
+<div class="line"><span class="lineno">  288</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.isEmpty()) {</div>
+<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  290</span>    }</div>
+<div class="line"><span class="lineno">  291</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> cellSize = <a class="code hl_function" href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">calculateCellSize</a>();</div>
+<div class="line"><span class="lineno">  292</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> pixelDiameter = cellSize * 0.8f;</div>
+<div class="line"><span class="lineno">  293</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> pixelOffset = (cellSize - pixelDiameter) / 2.0f;</div>
+<div class="line"><span class="lineno">  294</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> charWidthInCols = <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>;</div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordtype">float</span> matrixWidth = <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * cellSize;</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordtype">float</span> matrixHeight = <a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> * cellSize;</div>
+<div class="line"><span class="lineno">  297</span>    <span class="keywordtype">float</span> xBase = (width() - matrixWidth) / 2.0f;</div>
+<div class="line"><span class="lineno">  298</span>    <span class="keywordtype">float</span> yOffset = (height() - matrixHeight) / 2.0f;</div>
+<div class="line"><span class="lineno">  299</span>    painter.setClipRect(QRectF(xBase, yOffset, matrixWidth, matrixHeight));</div>
+<div class="line"><span class="lineno">  300</span>    <span class="keywordtype">int</span> numChars = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.length();</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordtype">float</span> totalTextWidthInCols = numChars * charWidthInCols</div>
+<div class="line"><span class="lineno">  302</span>        + (numChars &gt; 1 ? (numChars - 1) : 0);</div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordtype">float</span> totalTextWidthInPixels = totalTextWidthInCols * cellSize;</div>
+<div class="line"><span class="lineno">  304</span>    <span class="keywordtype">bool</span> isScrolling = (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>) &amp;&amp; <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>;</div>
+<div class="line"><span class="lineno">  305</span>    <span class="keywordtype">float</span> xOffset = xBase + (matrixWidth - totalTextWidthInPixels) / 2.0f;</div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">if</span> (isScrolling) {</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a3e5d7f6bb813612b8f60a079f42a176aad05ac42b94e98de107976c8f69d58793">bounceMode</a>) {</div>
+<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">if</span> (totalTextWidthInPixels &gt;= matrixWidth) {</div>
+<div class="line"><span class="lineno">  309</span>                <span class="comment">// Ajout de 2 pixel de marge pour éviter de changer de sens au moment ou la première lettre arrive tout à gauche de la matrice d&#39;affichage</span></div>
+<div class="line"><span class="lineno">  310</span>                xOffset = xBase - <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> + 2.0f * cellSize;</div>
+<div class="line"><span class="lineno">  311</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordtype">float</span> bounceRange = matrixWidth - totalTextWidthInPixels;</div>
+<div class="line"><span class="lineno">  313</span>                <span class="keywordtype">float</span> centeredBase = xBase + bounceRange / 2.0f;</div>
+<div class="line"><span class="lineno">  314</span>                xOffset = centeredBase + (<a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> - bounceRange / 2.0f);</div>
+<div class="line"><span class="lineno">  315</span>            }</div>
+<div class="line"><span class="lineno">  316</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  317</span>            xOffset = xBase + matrixWidth - <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a>;</div>
+<div class="line"><span class="lineno">  318</span>        }</div>
+<div class="line"><span class="lineno">  319</span>    }</div>
+<div class="line"><span class="lineno">  320</span>   </div>
+<div class="line"><span class="lineno">  321</span>    </div>
+<div class="line"><span class="lineno">  322</span>    </div>
+<div class="line"><span class="lineno">  323</span>    painter.setPen(Qt::NoPen);</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>    painter.setBrush(Qt::black);</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a>; ++row) {</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a>; ++col) {</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordtype">float</span> x = xBase + col * cellSize + pixelOffset;</div>
+<div class="line"><span class="lineno">  329</span>            <span class="keywordtype">float</span> y = yOffset + row * cellSize + pixelOffset;</div>
+<div class="line"><span class="lineno">  330</span>            painter.drawEllipse(QRectF(x, y, pixelDiameter, pixelDiameter));</div>
+<div class="line"><span class="lineno">  331</span>        }</div>
+<div class="line"><span class="lineno">  332</span>    }</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numChars; ++i) {</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordtype">char</span> c = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>[i].toLatin1();</div>
+<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="matrixfont_8h.html#aeca3c4dff732f4c6e87c11d5fa8d4604">matrix_font</a>.count(c)) {</div>
+<div class="line"><span class="lineno">  337</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  338</span>        }</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;charMap = <a class="code hl_variable" href="matrixfont_8h.html#aeca3c4dff732f4c6e87c11d5fa8d4604">matrix_font</a>.at(c);</div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordtype">float</span> charStartX = i * (charWidthInCols) * cellSize;</div>
+<div class="line"><span class="lineno">  341</span>        </div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0 ; row &lt; <a class="code hl_variable" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a> ; ++row) {</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>; ++col) {</div>
+<div class="line"><span class="lineno">  344</span>                <span class="keywordflow">if</span> (col &lt; charMap[row].length() &amp;&amp; charMap[row][col] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line"><span class="lineno">  345</span>                    <span class="keywordtype">float</span> x = xOffset + charStartX + col * cellSize + pixelOffset;</div>
+<div class="line"><span class="lineno">  346</span>                    <span class="keywordtype">float</span> y = yOffset + (row + (<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> - <a class="code hl_variable" href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a>) / 2.0f) * cellSize + pixelOffset;</div>
+<div class="line"><span class="lineno">  347</span>                    painter.setBrush(<a class="code hl_variable" href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">pixelColor</a>);</div>
+<div class="line"><span class="lineno">  348</span>                    <span class="keywordflow">if</span> (x + pixelDiameter &lt; xBase || x &gt; xBase + matrixWidth)</div>
+<div class="line"><span class="lineno">  349</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  350</span>                    painter.drawEllipse(QRectF(x, y, pixelDiameter, pixelDiameter));</div>
+<div class="line"><span class="lineno">  351</span>                }</div>
+<div class="line"><span class="lineno">  352</span>            }</div>
+<div class="line"><span class="lineno">  353</span>        }</div>
+<div class="line"><span class="lineno">  354</span>    }</div>
+<div class="line"><span class="lineno">  355</span>}</div>
 <div class="ttc" id="aclassMatrixDisplay_html_ac73d701466320dca1dab64725a348908"><div class="ttname"><a href="classMatrixDisplay.html#ac73d701466320dca1dab64725a348908">MatrixDisplay::backgroundColor</a></div><div class="ttdeci">QColor backgroundColor</div><div class="ttdoc">Couleur des pixels allumés.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00146">matrixdisplay.h:146</a></div></div>
 <div class="ttc" id="amatrixfont_8h_html_a40462ea490bd07bba949a43506d1cc3e"><div class="ttname"><a href="matrixfont_8h.html#a40462ea490bd07bba949a43506d1cc3e">CHAR_ROWS</a></div><div class="ttdeci">const int CHAR_ROWS</div><div class="ttdoc">Nombre de lignes par caractère dans la matrice.</div><div class="ttdef"><b>Definition</b> <a href="matrixfont_8h_source.html#l00030">matrixfont.h:30</a></div></div>
 <div class="ttc" id="amatrixfont_8h_html_aeca3c4dff732f4c6e87c11d5fa8d4604"><div class="ttname"><a href="matrixfont_8h.html#aeca3c4dff732f4c6e87c11d5fa8d4604">matrix_font</a></div><div class="ttdeci">std::map&lt; char, std::vector&lt; std::string &gt; &gt; matrix_font</div><div class="ttdoc">Police de caractères matricielle.</div><div class="ttdef"><b>Definition</b> <a href="matrixfont_8h_source.html#l00039">matrixfont.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00146">backgroundColor</a>, <a class="el" href="matrixdisplay_8h_source.html#l00041">bounceMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00155">calculateCellSize()</a>, <a class="el" href="matrixfont_8h_source.html#l00025">CHAR_COLS</a>, <a class="el" href="matrixfont_8h_source.html#l00030">CHAR_ROWS</a>, <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixfont_8h_source.html#l00039">matrix_font</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00032">MatrixRows</a>, <a class="el" href="matrixdisplay_8h_source.html#l00141">pixelColor</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00176">scrollMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00146">backgroundColor</a>, <a class="el" href="matrixdisplay_8h_source.html#l00041">bounceMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00151">calculateCellSize()</a>, <a class="el" href="matrixfont_8h_source.html#l00025">CHAR_COLS</a>, <a class="el" href="matrixfont_8h_source.html#l00030">CHAR_ROWS</a>, <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixfont_8h_source.html#l00039">matrix_font</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00032">MatrixRows</a>, <a class="el" href="matrixdisplay_8h_source.html#l00141">pixelColor</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00176">scrollMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -733,22 +726,22 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Indique si le texte courant dépasse la largeur affichable. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00271">271</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  272</span>{</div>
-<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.isEmpty())</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  275</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> cellSize = <a class="code hl_function" href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">calculateCellSize</a>();</div>
-<div class="line"><span class="lineno">  276</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> charWidthInCols = <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>;</div>
-<div class="line"><span class="lineno">  277</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> numChars = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.length();</div>
-<div class="line"><span class="lineno">  278</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> totalTextWidthInCols = numChars * charWidthInCols</div>
-<div class="line"><span class="lineno">  279</span>        + (numChars &gt; 1 ? (numChars - 1) : 0.0f);</div>
-<div class="line"><span class="lineno">  280</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> totalTextWidthInPixels = totalTextWidthInCols * cellSize;</div>
-<div class="line"><span class="lineno">  281</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> matrixWidth = <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * cellSize;</div>
-<div class="line"><span class="lineno">  282</span> </div>
-<div class="line"><span class="lineno">  283</span>    <span class="keywordflow">return</span> totalTextWidthInPixels &gt; matrixWidth;</div>
-<div class="line"><span class="lineno">  284</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00267">267</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  268</span>{</div>
+<div class="line"><span class="lineno">  269</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.isEmpty())</div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  271</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> cellSize = <a class="code hl_function" href="classMatrixDisplay.html#a5f8efa13c6fbf48f0dc760f004a99d39">calculateCellSize</a>();</div>
+<div class="line"><span class="lineno">  272</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> charWidthInCols = <a class="code hl_variable" href="matrixfont_8h.html#ae89428e9c78f67aa464131251dce53f8">CHAR_COLS</a>;</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> numChars = <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.length();</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> totalTextWidthInCols = numChars * charWidthInCols</div>
+<div class="line"><span class="lineno">  275</span>        + (numChars &gt; 1 ? (numChars - 1) : 0.0f);</div>
+<div class="line"><span class="lineno">  276</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> totalTextWidthInPixels = totalTextWidthInCols * cellSize;</div>
+<div class="line"><span class="lineno">  277</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> matrixWidth = <a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * cellSize;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">return</span> totalTextWidthInPixels &gt; matrixWidth;</div>
+<div class="line"><span class="lineno">  280</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00155">calculateCellSize()</a>, <a class="el" href="matrixfont_8h_source.html#l00025">CHAR_COLS</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, et <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00151">calculateCellSize()</a>, <a class="el" href="matrixfont_8h_source.html#l00025">CHAR_COLS</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, et <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -804,19 +797,19 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Gère le redimensionnement du widget et ajuste le défilement si nécessaire. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00186">186</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>{</div>
-<div class="line"><span class="lineno">  188</span>    QWidget::resizeEvent(event);</div>
-<div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>){</div>
-<div class="line"><span class="lineno">  191</span>        <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="line"><span class="lineno">  193</span>    <a class="code hl_slot" href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">onTimeout</a>();</div>
-<div class="line"><span class="lineno">  194</span>    update();</div>
-<div class="line"><span class="lineno">  195</span>}</div>
-<div class="ttc" id="aclassMatrixDisplay_html_aa76130d5a5435e70f2f0821a57b8ff90"><div class="ttname"><a href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">MatrixDisplay::restartScrollIfNeeded</a></div><div class="ttdeci">void restartScrollIfNeeded()</div><div class="ttdoc">Relance le timer de défilement si les conditions sont réunies.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00198">matrixdisplay.cpp:198</a></div></div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00182">182</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>{</div>
+<div class="line"><span class="lineno">  184</span>    QWidget::resizeEvent(event);</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>){</div>
+<div class="line"><span class="lineno">  187</span>        <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="line"><span class="lineno">  189</span>    <a class="code hl_slot" href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">onTimeout</a>();</div>
+<div class="line"><span class="lineno">  190</span>    update();</div>
+<div class="line"><span class="lineno">  191</span>}</div>
+<div class="ttc" id="aclassMatrixDisplay_html_aa76130d5a5435e70f2f0821a57b8ff90"><div class="ttname"><a href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">MatrixDisplay::restartScrollIfNeeded</a></div><div class="ttdeci">void restartScrollIfNeeded()</div><div class="ttdoc">Relance le timer de défilement si les conditions sont réunies.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00194">matrixdisplay.cpp:194</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00212">onTimeout()</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00198">restartScrollIfNeeded()</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00208">onTimeout()</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00194">restartScrollIfNeeded()</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -859,19 +852,19 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Relance le timer de défilement si les conditions sont réunies. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00198">198</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>{</div>
-<div class="line"><span class="lineno">  200</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
-<div class="line"><span class="lineno">  201</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">  202</span> </div>
-<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> != <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a> || !<a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>)</div>
-<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  205</span> </div>
-<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.isEmpty())</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;start(<a class="code hl_variable" href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">scrollIntervalMs</a>);</div>
-<div class="line"><span class="lineno">  210</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00194">194</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>{</div>
+<div class="line"><span class="lineno">  196</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">  197</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> != <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a> || !<a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>)</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a>.isEmpty())</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;start(<a class="code hl_variable" href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">scrollIntervalMs</a>);</div>
+<div class="line"><span class="lineno">  206</span>}</div>
 <div class="ttc" id="aclassMatrixDisplay_html_adae8b8186056b3d41937c46e84474b25"><div class="ttname"><a href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">MatrixDisplay::scrollIntervalMs</a></div><div class="ttdeci">int scrollIntervalMs</div><div class="ttdoc">Intervalle de défilement en millisecondes.</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8h_source.html#l00171">matrixdisplay.h:171</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00171">scrollIntervalMs</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
@@ -940,11 +933,11 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00091">91</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>{</div>
-<div class="line"><span class="lineno">   93</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">pixelColor</a> = color;</div>
-<div class="line"><span class="lineno">   94</span>    update();</div>
-<div class="line"><span class="lineno">   95</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00087">87</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a37a588efdef6edb51068667e1f8ed231">pixelColor</a> = color;</div>
+<div class="line"><span class="lineno">   90</span>    update();</div>
+<div class="line"><span class="lineno">   91</span>}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00141">pixelColor</a>.</p>
 <div class="dynheader">
@@ -994,11 +987,11 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00097">97</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>{</div>
-<div class="line"><span class="lineno">   99</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ac73d701466320dca1dab64725a348908">backgroundColor</a> = color;</div>
-<div class="line"><span class="lineno">  100</span>    update();</div>
-<div class="line"><span class="lineno">  101</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00093">93</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>{</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ac73d701466320dca1dab64725a348908">backgroundColor</a> = color;</div>
+<div class="line"><span class="lineno">   96</span>    update();</div>
+<div class="line"><span class="lineno">   97</span>}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00146">backgroundColor</a>.</p>
 <div class="dynheader">
@@ -1048,26 +1041,26 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00103">103</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == mode)</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> = mode;</div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984">Clock</a>) {</div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_slot" href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">onTimeout</a>();</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;start(1000);</div>
-<div class="line"><span class="lineno">  116</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>    update();</div>
-<div class="line"><span class="lineno">  120</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00099">99</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == mode)</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> = mode;</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3adb4ad562c823721b35b9ab9ecbef0984">Clock</a>) {</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_slot" href="classMatrixDisplay.html#a6ce597bea1bc075b16947c28c4f0225f">onTimeout</a>();</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;start(1000);</div>
+<div class="line"><span class="lineno">  112</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span>    update();</div>
+<div class="line"><span class="lineno">  116</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00033">Clock</a>, <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00212">onTimeout()</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00198">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00033">Clock</a>, <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00208">onTimeout()</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00194">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -1129,26 +1122,26 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00122">122</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordtype">bool</span> allowScroll = enabled &amp;&amp; <a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>;</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a> == allowScroll)</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>    <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a> = allowScroll;</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>) {</div>
-<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>) {</div>
-<div class="line"><span class="lineno">  135</span>            <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="line"><span class="lineno">  138</span>    update();</div>
-<div class="line"><span class="lineno">  139</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00118">118</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>{</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordtype">bool</span> allowScroll = enabled &amp;&amp; <a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>;</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a> == allowScroll)</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a> = allowScroll;</div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>) {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0">scrollEnabled</a>) {</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    update();</div>
+<div class="line"><span class="lineno">  135</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00198">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00194">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00166">scrollEnabled</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -1207,18 +1200,18 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00141">141</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>{</div>
-<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span> (interval &lt;= 0) {</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;isActive()) {</div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">scrollIntervalMs</a> = (2.0f/interval * <a class="code hl_variable" href="matrixdisplay_8cpp.html#af2dcf8c0aec7330c1f336b442e239629">defaultScrollIntervalMs</a>);</div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;start(<a class="code hl_variable" href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">scrollIntervalMs</a>);</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="line"><span class="lineno">  152</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00137">137</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span> (interval &lt;= 0) {</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;isActive()) {</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_variable" href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">scrollIntervalMs</a> = (2.0f/interval * <a class="code hl_variable" href="matrixdisplay_8cpp.html#af2dcf8c0aec7330c1f336b442e239629">defaultScrollIntervalMs</a>);</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_variable" href="classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2">timer</a>-&gt;start(<a class="code hl_variable" href="classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25">scrollIntervalMs</a>);</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="line"><span class="lineno">  148</span>}</div>
 <div class="ttc" id="amatrixdisplay_8cpp_html_af2dcf8c0aec7330c1f336b442e239629"><div class="ttname"><a href="matrixdisplay_8cpp.html#af2dcf8c0aec7330c1f336b442e239629">defaultScrollIntervalMs</a></div><div class="ttdeci">static constexpr int defaultScrollIntervalMs</div><div class="ttdef"><b>Definition</b> <a href="matrixdisplay_8cpp_source.html#l00034">matrixdisplay.cpp:34</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00034">defaultScrollIntervalMs</a>, <a class="el" href="matrixdisplay_8h_source.html#l00171">scrollIntervalMs</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00156">timer</a>.</p>
@@ -1267,19 +1260,19 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00068">68</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> == mode)</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> = mode;</div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">   75</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = 1;</div>
-<div class="line"><span class="lineno">   76</span>    <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
-<div class="line"><span class="lineno">   77</span>    update();</div>
-<div class="line"><span class="lineno">   78</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00064">64</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>{</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> == mode)</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <a class="code hl_variable" href="classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839">scrollMode</a> = mode;</div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a416e92ee2a73481c05ed06171a614770">scrollDirection</a> = 1;</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
+<div class="line"><span class="lineno">   73</span>    update();</div>
+<div class="line"><span class="lineno">   74</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00198">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00181">scrollDirection</a>, <a class="el" href="matrixdisplay_8h_source.html#l00176">scrollMode</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00194">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00181">scrollDirection</a>, <a class="el" href="matrixdisplay_8h_source.html#l00176">scrollMode</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -1335,17 +1328,17 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00081">81</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>{</div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a> = text.toUpper();</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>) {</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="line"><span class="lineno">   88</span>    update();</div>
-<div class="line"><span class="lineno">   89</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00077">77</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{</div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a894177829462ee7dae376c99be5f59f1">currentText</a> = text.toUpper();</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_variable" href="classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee">scrollOffset</a> = 0.0f;</div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classMatrixDisplay.html#a58808cd7695d5fcd21024e5eb32e7974">currentMode</a> == <a class="code hl_enumvalue" href="classMatrixDisplay.html#a941089a1f63207a1c8b8de68da17b0d3a6774cbc4ccb9f36a7ca3abe9ae5a2917">Text</a>) {</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_function" href="classMatrixDisplay.html#aa76130d5a5435e70f2f0821a57b8ff90">restartScrollIfNeeded</a>();</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   84</span>    update();</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00198">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
+<p class="reference">Références <a class="el" href="matrixdisplay_8h_source.html#l00151">currentMode</a>, <a class="el" href="matrixdisplay_8h_source.html#l00136">currentText</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00194">restartScrollIfNeeded()</a>, <a class="el" href="matrixdisplay_8h_source.html#l00161">scrollOffset</a>, et <a class="el" href="matrixdisplay_8h_source.html#l00032">Text</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -1401,13 +1394,13 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Fournit une suggestion de taille pour le widget. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Taille suggérée en pixels. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00060">60</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>),</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>)</div>
-<div class="line"><span class="lineno">   65</span>    };</div>
-<div class="line"><span class="lineno">   66</span>}</div>
+<p class="definition">Définition à la ligne <a class="el" href="matrixdisplay_8cpp_source.html#l00056">56</a> du fichier <a class="el" href="matrixdisplay_8cpp_source.html">matrixdisplay.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#af7e9fe067be400e31a0851d015d8a5c8">MatrixCols</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>),</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="matrixdisplay_8cpp.html#ad6c430513225d7cc1726429cb72b00ad">MatrixRows</a> * <a class="code hl_variable" href="matrixdisplay_8cpp.html#acde102e3104550e362a990bf98be4ee3">kDefaultCellSize</a>)</div>
+<div class="line"><span class="lineno">   61</span>    };</div>
+<div class="line"><span class="lineno">   62</span>}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="matrixdisplay_8cpp_source.html#l00033">kDefaultCellSize</a>, <a class="el" href="matrixdisplay_8cpp_source.html#l00031">MatrixCols</a>, et <a class="el" href="matrixdisplay_8cpp_source.html#l00032">MatrixRows</a>.</p>
 

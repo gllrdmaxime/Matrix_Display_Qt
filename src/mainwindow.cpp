@@ -23,10 +23,6 @@
 #include <QKeySequence>
 #include <QLabel>
 
-/**
- * @brief Constructeur de la classe MainWindow
- * @param parent Pointeur vers le widget parent (par défaut nullptr)
- */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
       defaultText(QStringLiteral("HELLO WORLD!"))
@@ -105,7 +101,6 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
-
     setWindowTitle("Matrix Display");
     resize(900, 220);
 
@@ -116,9 +111,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow() {}
 
-/**
- * @brief Met à jour le texte affiché sur la matrice LED
- */
 void MainWindow::updateMatrixText()
 {
     matrixDisplay->setText(textInput->text());
@@ -128,9 +120,6 @@ void MainWindow::updateMatrixText()
     }
 }
 
-/**
- * @brief Ouvre une boîte de dialogue pour sélectionner la couleur des pixels
- */
 void MainWindow::openColorPicker()
 {
     QColor color = QColorDialog::getColor(Qt::green, this, "Choose Pixel Color");
@@ -139,9 +128,6 @@ void MainWindow::openColorPicker()
     }
 }
 
-/**
- * @brief Ouvre une boîte de dialogue pour sélectionner la couleur du fond
- */
 void MainWindow::openColorPicker_Background()
 {
     QColor color = QColorDialog::getColor(Qt::darkGray, this, "Choose Background Color");
@@ -150,11 +136,6 @@ void MainWindow::openColorPicker_Background()
     }
 }
 
-/**
- * @brief Active ou désactive le mode horloge sur la matrice LED.
- *        Force la désactivation du défilement en mode horloge et restaure
- *        un texte par défaut lors du retour en mode texte si aucun contenu n'a été saisi.
- */
 void MainWindow::toggleClock(bool checked)
 {
     if (checked) {

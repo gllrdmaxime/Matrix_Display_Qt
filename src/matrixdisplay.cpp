@@ -33,10 +33,6 @@ static constexpr int MatrixRows = CHAR_ROWS + 4;
 static constexpr float kDefaultCellSize = 12.0f;
 static constexpr int defaultScrollIntervalMs = 50;
 
-/**
- * @brief Constructeur de la classe MatrixDisplay
- * @param parent Pointeur vers le widget parent (par défaut nullptr)
- */
 MatrixDisplay::MatrixDisplay(QWidget *parent)
     : QWidget(parent),
       pixelColor(0, 255, 0),
