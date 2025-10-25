@@ -5,7 +5,7 @@ var searchData=
   ['scrollenabled_2',['scrollEnabled',['../classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0',1,'MatrixDisplay']]],
   ['scrollintervalms_3',['scrollIntervalMs',['../classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25',1,'MatrixDisplay']]],
   ['scrollmode_4',['scrollmode',['../classMatrixDisplay.html#a3e5d7f6bb813612b8f60a079f42a176a',1,'MatrixDisplay::ScrollMode'],['../classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839',1,'MatrixDisplay::scrollMode']]],
-  ['scrolloffset_5',['scrollOffset',['../classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee',1,'MatrixDisplay']]],
+  ['scrolloffset_5',['scrollOffset',['../classMatrixDisplay.html#a7c12396c112a8a534ac515b6624a449b',1,'MatrixDisplay']]],
   ['setcolor_6',['setColor',['../classMatrixDisplay.html#a6a8fa0adf7f04355140784d7c7d4b337',1,'MatrixDisplay']]],
   ['setcolor_5fbackground_7',['setColor_Background',['../classMatrixDisplay.html#ac1d75621bca4307dc554129dcd19cf56',1,'MatrixDisplay']]],
   ['setdisplaymode_8',['setDisplayMode',['../classMatrixDisplay.html#a5c0b40d25325bdce30f8c091ca8f545f',1,'MatrixDisplay']]],

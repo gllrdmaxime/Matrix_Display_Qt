@@ -158,7 +158,7 @@ private:
     /**
      * @brief Décalage horizontal courant utilisé pendant le défilement.
      */
-    int scrollOffset;
+    float scrollOffset;
 
     /**
      * @brief Indique si le défilement est autorisé en mode texte.

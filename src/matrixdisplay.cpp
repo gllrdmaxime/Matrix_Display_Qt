@@ -306,7 +306,7 @@ void MatrixDisplay::paintEvent(QPaintEvent *event)
     if (isScrolling) {
         if (scrollMode == bounceMode) {
             if (totalTextWidthInPixels >= matrixWidth) {
-                // Ajout de 2 pixel de marge pour éviter de changer de sens au moment ou la première lettre arrive tout à gauche de la matrice d'affichage
+                // Ajout de 2 pxiels de marge pour voir bien entièrement le premier caractères
                 xOffset = xBase - scrollOffset + 2.0f * cellSize;
             } else {
                 float bounceRange = matrixWidth - totalTextWidthInPixels;

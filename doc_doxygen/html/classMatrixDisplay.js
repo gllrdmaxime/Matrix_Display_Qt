@@ -31,6 +31,6 @@ var classMatrixDisplay =
     [ "scrollEnabled", "classMatrixDisplay.html#aaabc0c3c35828f23fe4b3b9dd45d57c0", null ],
     [ "scrollIntervalMs", "classMatrixDisplay.html#adae8b8186056b3d41937c46e84474b25", null ],
     [ "scrollMode", "classMatrixDisplay.html#ad22df8d6884c151eb02bee42b4500839", null ],
-    [ "scrollOffset", "classMatrixDisplay.html#a04d45e698522002abb8b8fb3c96714ee", null ],
+    [ "scrollOffset", "classMatrixDisplay.html#a7c12396c112a8a534ac515b6624a449b", null ],
     [ "timer", "classMatrixDisplay.html#ade2f2415ecfedf89bded47ba96efdef2", null ]
 ];
