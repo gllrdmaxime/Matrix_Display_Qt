@@ -1,6 +1,6 @@
 # Matrix Display Application
 
-This project is a Qt 6 application developed in C++ that simulates a fixed-grid LED matrix. It can render text with optional scrolling or display a digital clock. The project is built using CMake and includes Doxygen-ready comments for generating API documentation.
+This project is a Qt 6 application developed in C++ that simulates a fixed-grid LED matrix. It can render text with optional scrolling or display a digital clock. The project is built using CMake and includes Doxygen-ready comments for generating the documentation.
 
 ## Features
 
@@ -8,7 +8,7 @@ This project is a Qt 6 application developed in C++ that simulates a fixed-grid 
 - Text mode with horizontal scrolling for long strings or optional for short strings.
 - Clock mode with blinking separator.
 - Runtime pixel and background color selection.
-- Doxygen-ready API comments.
+- Doxygen-ready comments.
 
 ## Project Structure
 
